@@ -25,8 +25,17 @@
         _webURLAsString = webURLAsString;
         _apiURLAsString = apiURLasString;
         _webPublicationDateAsString = webPublicanDateAsString;
-        // to do
-        // set 
+      
+        // set url
+        _webURL = [NSURL URLWithString:_webURLAsString];
+        _apiURL = [NSURL URLWithString:_apiURLAsString];
+        
+        // set the date
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+        NSDate *shortDate = [dateFormatter dateFromString:_webPublicationDateAsString];
+        
+        _webPublicationDate = shortDate;
         
     }
     return self;
