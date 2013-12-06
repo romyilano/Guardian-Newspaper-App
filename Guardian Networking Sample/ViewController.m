@@ -24,6 +24,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.webView.scalesPageToFit = YES;
+    
+    self.textView.text = @"Click on button to get latest guardian article";
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,32 +62,17 @@
                                    [self processJSON:data  withError:connectionError];
                                    
                                    NSDictionary *responseDict = [self.jsonDictionary objectForKey:@"response"];
-                                   NSArray *results = [responseDict objectForKey:@"results"];
-                                   
-                                   // get the second article
-                                   NSDictionary *firstArticle = results[0];
-                                   
+                                   self.returnedArticles = [responseDict objectForKey:@"results"];
+                                
                                    // replace with a model class
-                                   Article *article = [[Article alloc] initWIthDictionary:firstArticle];
-                
-                                   
-                                   /*
-                                   
-                                   
-                                   //
-                                   NSString *firstArticleTitle = [firstArticle objectForKey:@"webTitle"];
-                                   NSString *webURL = [firstArticle objectForKey:@"webUrl"];
-                                   NSURL *articleUrl = [NSURL URLWithString:webURL];
-                                   NSURLRequest *requestObj = [NSURLRequest requestWithURL:articleUrl];
-                                    */
-                                   
-                                   // get back on the main thread and put the article title in the main view
+                                   Article *firstArticle = [[Article alloc] initWIthDictionary:self.returnedArticles[0]];
+        
                                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                                        
-                                       self.textView.text = article.webTitle;
+                                       self.textView.text = firstArticle.webTitle;
                                        
                                        // load the article in the webview
-                                       [self.webView loadRequest:[NSURLRequest requestWithURL:article.webURL]];
+                                       [self.webView loadRequest:[NSURLRequest requestWithURL:firstArticle.webURL]];
                                       
                                        
                                    }];
@@ -133,6 +120,7 @@
         {
             // some other object was returned
             // dunno how to deal with it as the derisalizer turns only dictionary or arrays
+            NSLog(@"Whatever the url gave back wasn't a dictionary or array. it was something else.");
         }
     }
     else if (error !=nil)
@@ -141,7 +129,6 @@
     }
     
 }
-
 
 #pragma mark - UIWebView Delegate Methods
 -(void)webViewDidStartLoad:(UIWebView *)webView

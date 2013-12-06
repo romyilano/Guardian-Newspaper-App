@@ -14,7 +14,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *articleButton;
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+
 @property (strong, nonatomic) NSDictionary *jsonDictionary;
+@property (strong, nonatomic) NSArray *returnedArticles;
 
 - (IBAction)summonarticlebtnPressed:(UIButton *)sender;
 
