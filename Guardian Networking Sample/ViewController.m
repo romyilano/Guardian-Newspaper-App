@@ -48,10 +48,39 @@
                                        queue:queue
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                
+                               // sweet smell of success
                                if([data length] > 0 && connectionError == nil)
                                {
-                                   NSString *jsondata = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                   NSLog(@"json data: %@", jsondata);
+                                   NSError *error = nil;
+                                   
+                                   id jsonObject = [NSJSONSerialization JSONObjectWithData:data
+                                                                                   options:NSJSONReadingAllowFragments
+                                                                                     error:&error];
+                                   
+                                   if (jsonObject != nil && error ==nil)
+                                   {
+                                       NSLog(@"Successfully deserialized...");
+                                       
+                                       if ([jsonObject isKindOfClass:[NSDictionary class]])
+                                       {
+                                           NSDictionary *deserializedDictionary = (NSDictionary *)jsonObject;
+                                           NSLog(@"Deserialized json dictionary = %@", deserializedDictionary);
+                                           
+                                       } else if ([jsonObject isKindOfClass:[NSArray class]])
+                                       {
+                                           NSArray *deserializedArray = (NSArray *)jsonObject;
+                                           NSLog(@"Deserialized JSON array = %@", deserializedArray);
+                                       }
+                                       else
+                                       {
+                                           // some other object was returned
+                                           // dunno how to deal with it as the derisalizer turns only dictionary or arrays
+                                       }
+                                   }
+                                   else if (error !=nil)
+                                   {
+                                       NSLog(@"An error happened while deserializing the JSON data and it's: %@", error);
+                                   }
                                }
                                else if ([data length] == 0 && connectionError == nil)
                                {
