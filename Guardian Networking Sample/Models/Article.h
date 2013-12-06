@@ -31,8 +31,8 @@
               webTitle:(NSString *)webTitle
         webURLAsString:(NSString *)webURLAsString
         apiURLAsString:(NSString *)apiURLasString
-webPublicationDateAsString:(NSString *)webPublicanDateAsString;
+webPublicationDateAsString:(NSString *)webPublicationDateAsString;
 
-
+-(id)initWIthDictionary:(NSDictionary *)dictionaryJSON;
 
 @end

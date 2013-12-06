@@ -9,6 +9,8 @@
 
 #import "ViewController.h"
 #import "GuardianAPIHelper.h"
+#import "Constants.h"
+#import "Article.h"
 
 @interface ViewController ()
 
@@ -62,18 +64,28 @@
                                    
                                    // get the second article
                                    NSDictionary *firstArticle = results[0];
+                                   
+                                   // replace with a model class
+                                   Article *article = [[Article alloc] initWIthDictionary:firstArticle];
+                
+                                   
+                                   /*
+                                   
+                                   
+                                   //
                                    NSString *firstArticleTitle = [firstArticle objectForKey:@"webTitle"];
                                    NSString *webURL = [firstArticle objectForKey:@"webUrl"];
                                    NSURL *articleUrl = [NSURL URLWithString:webURL];
                                    NSURLRequest *requestObj = [NSURLRequest requestWithURL:articleUrl];
+                                    */
                                    
                                    // get back on the main thread and put the article title in the main view
                                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                                        
-                                       self.textView.text = firstArticleTitle;
+                                       self.textView.text = article.webTitle;
                                        
                                        // load the article in the webview
-                                       [self.webView loadRequest:requestObj];
+                                       [self.webView loadRequest:[NSURLRequest requestWithURL:article.webURL]];
                                       
                                        
                                    }];

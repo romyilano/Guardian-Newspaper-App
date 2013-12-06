@@ -15,7 +15,7 @@
               webTitle:(NSString *)webTitle
         webURLAsString:(NSString *)webURLAsString
         apiURLAsString:(NSString *)apiURLasString
-        webPublicationDateAsString:(NSString *)webPublicanDateAsString
+        webPublicationDateAsString:(NSString *)webPublicationDateAsString
 {
     if (self = [super init])
     {
@@ -24,7 +24,7 @@
         _webTitle = webTitle;
         _webURLAsString = webURLAsString;
         _apiURLAsString = apiURLasString;
-        _webPublicationDateAsString = webPublicanDateAsString;
+        _webPublicationDateAsString = webPublicationDateAsString;
       
         // set url
         _webURL = [NSURL URLWithString:_webURLAsString];
@@ -40,4 +40,32 @@
     }
     return self;
 }
+
+-(id)initWIthDictionary:(NSDictionary *)dictionaryJSON
+{
+    if (self = [super init])
+    {
+        _articleId = dictionaryJSON[@"apiUrl"];
+        _sectionId = dictionaryJSON[@"sectionId"];
+        _webTitle = dictionaryJSON[@"webTitle"];
+        _webURLAsString = dictionaryJSON[@"webUrl"];
+        _apiURLAsString = dictionaryJSON[@"apiUrl"];
+        _webPublicationDateAsString = dictionaryJSON[@"webPublicationDate"];
+        
+        // set url
+        _webURL = [NSURL URLWithString:_webURLAsString];
+        _apiURL = [NSURL URLWithString:_apiURLAsString];
+        
+        // set the date
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+        NSDate *shortDate = [dateFormatter dateFromString:_webPublicationDateAsString];
+        
+        _webPublicationDate = shortDate;
+    }
+    
+    return self;
+}
+
+
 @end
