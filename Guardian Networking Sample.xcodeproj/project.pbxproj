@@ -21,10 +21,10 @@
 		1CA5E07718522FA300A9FB8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05918522FA300A9FB8C /* UIKit.framework */; };
 		1CA5E07F18522FA300A9FB8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E07D18522FA300A9FB8C /* InfoPlist.strings */; };
 		1CA5E08118522FA300A9FB8C /* Guardian_Networking_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E08018522FA300A9FB8C /* Guardian_Networking_SampleTests.m */; };
-		1CA5E08C1852300600A9FB8C /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E08B1852300600A9FB8C /* README.MD */; };
-		1CA5E08D1852300600A9FB8C /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E08B1852300600A9FB8C /* README.MD */; };
 		1CA5E0901852382300A9FB8C /* GuardianAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */; };
 		1CA5E0911852382300A9FB8C /* GuardianAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */; };
+		1CA5E0931852481F00A9FB8C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0921852481F00A9FB8C /* README.md */; };
+		1CA5E0941852481F00A9FB8C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0921852481F00A9FB8C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +58,9 @@
 		1CA5E07E18522FA300A9FB8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1CA5E08018522FA300A9FB8C /* Guardian_Networking_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Guardian_Networking_SampleTests.m; sourceTree = "<group>"; };
 		1CA5E08A18522FF600A9FB8C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		1CA5E08B1852300600A9FB8C /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.MD; sourceTree = "<group>"; };
 		1CA5E08E1852382300A9FB8C /* GuardianAPIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianAPIHelper.h; sourceTree = "<group>"; };
 		1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardianAPIHelper.m; sourceTree = "<group>"; };
+		1CA5E0921852481F00A9FB8C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 		1CA5E04918522FA300A9FB8C = {
 			isa = PBXGroup;
 			children = (
-				1CA5E08B1852300600A9FB8C /* README.MD */,
+				1CA5E0921852481F00A9FB8C /* README.md */,
 				1CA5E08A18522FF600A9FB8C /* Constants.h */,
 				1CA5E05B18522FA300A9FB8C /* Guardian Networking Sample */,
 				1CA5E07A18522FA300A9FB8C /* Guardian Networking SampleTests */,
@@ -242,7 +242,7 @@
 			files = (
 				1CA5E06E18522FA300A9FB8C /* Images.xcassets in Resources */,
 				1CA5E06018522FA300A9FB8C /* InfoPlist.strings in Resources */,
-				1CA5E08C1852300600A9FB8C /* README.MD in Resources */,
+				1CA5E0931852481F00A9FB8C /* README.md in Resources */,
 				1CA5E06918522FA300A9FB8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,7 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CA5E08D1852300600A9FB8C /* README.MD in Resources */,
+				1CA5E0941852481F00A9FB8C /* README.md in Resources */,
 				1CA5E07F18522FA300A9FB8C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
