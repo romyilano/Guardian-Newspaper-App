@@ -74,8 +74,8 @@
 		1CA5E07E18522FA300A9FB8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1CA5E08018522FA300A9FB8C /* Guardian_Networking_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Guardian_Networking_SampleTests.m; sourceTree = "<group>"; };
 		1CA5E08A18522FF600A9FB8C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		1CA5E08E1852382300A9FB8C /* GuardianAPIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianAPIHelper.h; sourceTree = "<group>"; };
-		1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardianAPIHelper.m; sourceTree = "<group>"; };
+		1CA5E08E1852382300A9FB8C /* GuardianAPIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuardianAPIHelper.h; path = "Guardian Networking Sample/GuardianAPIHelper.h"; sourceTree = "<group>"; };
+		1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GuardianAPIHelper.m; path = "Guardian Networking Sample/GuardianAPIHelper.m"; sourceTree = "<group>"; };
 		1CA5E0921852481F00A9FB8C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1CA5E0951852489200A9FB8C /* iphoneApp-ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphoneApp-ios7@2x.png"; sourceTree = "<group>"; };
 		1CA5E0961852489200A9FB8C /* iphone-spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-spotlight@2x.png"; sourceTree = "<group>"; };
@@ -120,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				1CA5E0921852481F00A9FB8C /* README.md */,
-				1CA5E08A18522FF600A9FB8C /* Constants.h */,
 				1CA5E05B18522FA300A9FB8C /* Guardian Networking Sample */,
 				1CA5E07A18522FA300A9FB8C /* Guardian Networking SampleTests */,
 				1CA5E05418522FA300A9FB8C /* Frameworks */,
@@ -151,9 +150,10 @@
 		1CA5E05B18522FA300A9FB8C /* Guardian Networking Sample */ = {
 			isa = PBXGroup;
 			children = (
-				1CA5E0A0185249BC00A9FB8C /* = Model Classes */,
+				1CA5E0A0185249BC00A9FB8C /*  = Model + More */,
 				1CA5E09F185249A000A9FB8C /* = GUI */,
 				1CA5E09E1852499200A9FB8C /* = Graphics */,
+				1CA5E0BB18526B7E00A9FB8C /* =Reference */,
 				1CA5E05C18522FA300A9FB8C /* Supporting Files */,
 			);
 			path = "Guardian Networking Sample";
@@ -204,22 +204,14 @@
 			children = (
 				1CA5E06418522FA300A9FB8C /* AppDelegate.h */,
 				1CA5E06518522FA300A9FB8C /* AppDelegate.m */,
-				1CA5E08E1852382300A9FB8C /* GuardianAPIHelper.h */,
-				1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */,
 				1CA5E06718522FA300A9FB8C /* Main.storyboard */,
-				1CA5E06A18522FA300A9FB8C /* ViewController.h */,
-				1CA5E06B18522FA300A9FB8C /* ViewController.m */,
-				1CA5E0A9185251D800A9FB8C /* ArticlesViewController.h */,
-				1CA5E0AA185251D800A9FB8C /* ArticlesViewController.m */,
-				1CA5E0B1185263BD00A9FB8C /* ArticleCell.h */,
-				1CA5E0B2185263BD00A9FB8C /* ArticleCell.m */,
-				1CA5E0B5185266AB00A9FB8C /* DetailViewController.h */,
-				1CA5E0B6185266AB00A9FB8C /* DetailViewController.m */,
+				1CA5E0BA18526B7100A9FB8C /* = Basic Latest Article */,
+				1CA5E0B918526B4D00A9FB8C /* = 10 Latest Articles */,
 			);
 			name = "= GUI";
 			sourceTree = "<group>";
 		};
-		1CA5E0A0185249BC00A9FB8C /* = Model Classes */ = {
+		1CA5E0A0185249BC00A9FB8C /*  = Model + More */ = {
 			isa = PBXGroup;
 			children = (
 				1CA5E0A1185249CE00A9FB8C /* Article.h */,
@@ -227,7 +219,40 @@
 				1CA5E0AD1852585F00A9FB8C /* ArticleBuilder.h */,
 				1CA5E0AE1852585F00A9FB8C /* ArticleBuilder.m */,
 			);
-			name = "= Model Classes";
+			name = " = Model + More";
+			sourceTree = "<group>";
+		};
+		1CA5E0B918526B4D00A9FB8C /* = 10 Latest Articles */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5E0A9185251D800A9FB8C /* ArticlesViewController.h */,
+				1CA5E0AA185251D800A9FB8C /* ArticlesViewController.m */,
+				1CA5E0B1185263BD00A9FB8C /* ArticleCell.h */,
+				1CA5E0B2185263BD00A9FB8C /* ArticleCell.m */,
+				1CA5E0B5185266AB00A9FB8C /* DetailViewController.h */,
+				1CA5E0B6185266AB00A9FB8C /* DetailViewController.m */,
+			);
+			name = "= 10 Latest Articles";
+			sourceTree = "<group>";
+		};
+		1CA5E0BA18526B7100A9FB8C /* = Basic Latest Article */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5E06A18522FA300A9FB8C /* ViewController.h */,
+				1CA5E06B18522FA300A9FB8C /* ViewController.m */,
+			);
+			name = "= Basic Latest Article";
+			sourceTree = "<group>";
+		};
+		1CA5E0BB18526B7E00A9FB8C /* =Reference */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5E08A18522FF600A9FB8C /* Constants.h */,
+				1CA5E08E1852382300A9FB8C /* GuardianAPIHelper.h */,
+				1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */,
+			);
+			name = "=Reference";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

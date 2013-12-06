@@ -145,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a57-5w-Q18" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1570" y="225"/>
+            <point key="canvasLocation" x="1568" y="241"/>
         </scene>
         <!--View Controller - Latest iPhone Article-->
         <scene sceneID="ufC-wZ-h7g">
@@ -190,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126" y="-477"/>
+            <point key="canvasLocation" x="1266" y="-502"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hGN-Ly-I7Z">
@@ -209,19 +209,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Gc-5L-AA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="129" y="-494"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="wPb-34-kBC">
-            <objects>
-                <viewController id="N4r-W1-0Ql" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RbJ-VX-vLj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VO3-cF-E3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

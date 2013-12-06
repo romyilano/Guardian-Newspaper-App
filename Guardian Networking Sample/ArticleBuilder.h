@@ -24,7 +24,6 @@
 
 @end
 
-
 enum {
     ArticleBuilderInvalidJSONError,
     ArticleBuilderMissingDataError
