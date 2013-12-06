@@ -12,6 +12,9 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIButton *articleButton;
+
+@property (strong, nonatomic) NSDictionary *jsonDictionary;
+
 - (IBAction)summonarticlebtnPressed:(UIButton *)sender;
 
 @end

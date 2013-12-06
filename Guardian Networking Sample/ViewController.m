@@ -51,36 +51,22 @@
                                // sweet smell of success
                                if([data length] > 0 && connectionError == nil)
                                {
-                                   NSError *error = nil;
+                                  
+                                   // turn the results into a jsondictionary
+                                   [self processJSON:data  withError:connectionError];
                                    
-                                   id jsonObject = [NSJSONSerialization JSONObjectWithData:data
-                                                                                   options:NSJSONReadingAllowFragments
-                                                                                     error:&error];
+                                   NSDictionary *responseDict = [self.jsonDictionary objectForKey:@"response"];
+                                   NSArray *results = [responseDict objectForKey:@"results"];
                                    
-                                   if (jsonObject != nil && error ==nil)
-                                   {
-                                       NSLog(@"Successfully deserialized...");
+                                   // get the second article
+                                   NSDictionary *firstArticle = results[0];
+                                   NSString *firstArticleTitle = [firstArticle objectForKey:@"webTitle"];
+                                   
+                                   [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                                        
-                                       if ([jsonObject isKindOfClass:[NSDictionary class]])
-                                       {
-                                           NSDictionary *deserializedDictionary = (NSDictionary *)jsonObject;
-                                           NSLog(@"Deserialized json dictionary = %@", deserializedDictionary);
-                                           
-                                       } else if ([jsonObject isKindOfClass:[NSArray class]])
-                                       {
-                                           NSArray *deserializedArray = (NSArray *)jsonObject;
-                                           NSLog(@"Deserialized JSON array = %@", deserializedArray);
-                                       }
-                                       else
-                                       {
-                                           // some other object was returned
-                                           // dunno how to deal with it as the derisalizer turns only dictionary or arrays
-                                       }
-                                   }
-                                   else if (error !=nil)
-                                   {
-                                       NSLog(@"An error happened while deserializing the JSON data and it's: %@", error);
-                                   }
+                                       self.textView.text = firstArticleTitle;
+                                   }];
+                                   
                                }
                                else if ([data length] == 0 && connectionError == nil)
                                {
@@ -94,4 +80,44 @@
 
     
 }
+
+-(void)processJSON:(NSData *)jsonData withError:(NSError *)connectionError
+{
+    NSError *error = nil;
+    
+    id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                    options:NSJSONReadingAllowFragments
+                                                      error:&error];
+    
+    if (jsonObject != nil && error ==nil)
+    {
+        NSLog(@"Successfully deserialized...");
+        
+        if ([jsonObject isKindOfClass:[NSDictionary class]])
+        {
+            NSDictionary *deserializedDictionary = (NSDictionary *)jsonObject;
+            
+            self.jsonDictionary = deserializedDictionary;
+            
+            NSLog(@"Deserialized json dictionary = %@", deserializedDictionary);
+            
+        } else if ([jsonObject isKindOfClass:[NSArray class]])
+        {
+            NSArray *deserializedArray = (NSArray *)jsonObject;
+            NSLog(@"Deserialized JSON array = %@", deserializedArray);
+        }
+        else
+        {
+            // some other object was returned
+            // dunno how to deal with it as the derisalizer turns only dictionary or arrays
+        }
+    }
+    else if (error !=nil)
+    {
+        NSLog(@"An error happened while deserializing the JSON data and it's: %@", error);
+    }
+    
+}
+
+
 @end
