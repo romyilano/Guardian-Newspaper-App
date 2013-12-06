@@ -33,6 +33,6 @@
         apiURLAsString:(NSString *)apiURLasString
 webPublicationDateAsString:(NSString *)webPublicationDateAsString;
 
--(id)initWIthDictionary:(NSDictionary *)dictionaryJSON;
+-(id)initWithDictionary:(NSDictionary *)dictionaryJSON;
 
 @end

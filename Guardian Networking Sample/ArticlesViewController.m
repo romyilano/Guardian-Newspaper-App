@@ -7,8 +7,15 @@
 //
 
 #import "ArticlesViewController.h"
+#import "ArticleBuilder.h"
+#import "Article.h"
+#import "ArticleCell.h"
+
+#import "GuardianAPIHelper.h"
+#import "Constants.h"
 
 @interface ArticlesViewController ()
+@property (strong, nonatomic) ArticleBuilder *articleBuilder;
 
 @end
 
@@ -32,6 +39,11 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _articleBuilder = [[ArticleBuilder alloc] init];
+    
+    [self getGuardianArticlesWithSearchTerm:@"celebrity"];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,25 +56,41 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+
+    return 1;
+  
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    if (self.articles.count < 1)
+    {
+        return 1;
+    }
+    else {
+        
+        return self.articles.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    ArticleCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+
     // Configure the cell...
-    
+    if (self.articles.count == 0)
+    {
+         cell.textLabel.text = @"Loading";
+    }
+    else
+    {
+        Article *thisArticle = self.articles[indexPath.row];
+        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:10.0];
+        cell.textLabel.text = thisArticle.webTitle;
+        
+        
+    }
     return cell;
 }
 
@@ -117,4 +145,49 @@
 
  */
 
+#pragma mark - Custom Methods
+-(void)getGuardianArticlesWithSearchTerm:(NSString *)searchTerm
+{
+    // summon the latest guardian article
+    NSString *urlAsString = guardianSearchURL;
+    NSString *searchString = [NSString stringWithFormat:@"?q=%@", searchTerm];
+    NSString *guardianKeyString = [NSString stringWithFormat:@"&api-key=%@", kGuardianKey];
+    
+    [urlAsString stringByAppendingString:searchString];
+    [urlAsString stringByAppendingString:guardianKeyString];
+    
+    NSURL *url = [NSURL URLWithString:urlAsString];
+    
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+    [urlRequest setTimeoutInterval:30.0f];
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    [NSURLConnection sendAsynchronousRequest:urlRequest
+                                       queue:queue
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               
+                               // to-do - use the new Articlebuilder to process the reseponse
+                               
+                               NSString *dataString = [[NSString alloc] initWithData:data
+                                                                            encoding:NSUTF8StringEncoding];
+                               
+                               self.articles = [self.articleBuilder articlesFromJSON:dataString
+                                                                               erorr:connectionError];
+                               
+                              if ((self.articles.count > 0) && connectionError == nil)  // success
+                              {
+                                  // on the main thread relad the talbe
+                                  [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                      NSNumber *articleCount = [NSNumber numberWithUnsignedLong:(unsigned long)self.articles.count];
+                                      self.title = [NSString stringWithFormat:@"%@ articles", articleCount];
+                                      [self.tableView reloadData];
+                                      
+                                  }];
+                                 
+                              }
+                               
+                           }];
+    
+}
 @end

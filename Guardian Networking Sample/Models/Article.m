@@ -41,7 +41,7 @@
     return self;
 }
 
--(id)initWIthDictionary:(NSDictionary *)dictionaryJSON
+-(id)initWithDictionary:(NSDictionary *)dictionaryJSON
 {
     if (self = [super init])
     {

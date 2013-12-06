@@ -13,8 +13,7 @@ if you want to run this on your phone or the simulator
 
 # To-Do
 
-* Model out the JSON response
-
+* List of last 20 articles
 
 # Helpful Links
 

@@ -65,7 +65,7 @@
                                    self.returnedArticles = [responseDict objectForKey:@"results"];
                                 
                                    // replace with a model class
-                                   Article *firstArticle = [[Article alloc] initWIthDictionary:self.returnedArticles[0]];
+                                   Article *firstArticle = [[Article alloc] initWithDictionary:self.returnedArticles[0]];
         
                                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                                        

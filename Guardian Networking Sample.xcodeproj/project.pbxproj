@@ -35,6 +35,10 @@
 		1CA5E0A4185249CE00A9FB8C /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0A2185249CE00A9FB8C /* Article.m */; };
 		1CA5E0AB185251D800A9FB8C /* ArticlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0AA185251D800A9FB8C /* ArticlesViewController.m */; };
 		1CA5E0AC185251D800A9FB8C /* ArticlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0AA185251D800A9FB8C /* ArticlesViewController.m */; };
+		1CA5E0AF1852585F00A9FB8C /* ArticleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0AE1852585F00A9FB8C /* ArticleBuilder.m */; };
+		1CA5E0B01852585F00A9FB8C /* ArticleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0AE1852585F00A9FB8C /* ArticleBuilder.m */; };
+		1CA5E0B3185263BD00A9FB8C /* ArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0B2185263BD00A9FB8C /* ArticleCell.m */; };
+		1CA5E0B4185263BD00A9FB8C /* ArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0B2185263BD00A9FB8C /* ArticleCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		1CA5E0A2185249CE00A9FB8C /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = Models/Article.m; sourceTree = "<group>"; };
 		1CA5E0A9185251D800A9FB8C /* ArticlesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlesViewController.h; sourceTree = "<group>"; };
 		1CA5E0AA185251D800A9FB8C /* ArticlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlesViewController.m; sourceTree = "<group>"; };
+		1CA5E0AD1852585F00A9FB8C /* ArticleBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleBuilder.h; sourceTree = "<group>"; };
+		1CA5E0AE1852585F00A9FB8C /* ArticleBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleBuilder.m; sourceTree = "<group>"; };
+		1CA5E0B1185263BD00A9FB8C /* ArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleCell.h; sourceTree = "<group>"; };
+		1CA5E0B2185263BD00A9FB8C /* ArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +207,8 @@
 				1CA5E06B18522FA300A9FB8C /* ViewController.m */,
 				1CA5E0A9185251D800A9FB8C /* ArticlesViewController.h */,
 				1CA5E0AA185251D800A9FB8C /* ArticlesViewController.m */,
+				1CA5E0B1185263BD00A9FB8C /* ArticleCell.h */,
+				1CA5E0B2185263BD00A9FB8C /* ArticleCell.m */,
 			);
 			name = "= GUI";
 			sourceTree = "<group>";
@@ -208,6 +218,8 @@
 			children = (
 				1CA5E0A1185249CE00A9FB8C /* Article.h */,
 				1CA5E0A2185249CE00A9FB8C /* Article.m */,
+				1CA5E0AD1852585F00A9FB8C /* ArticleBuilder.h */,
+				1CA5E0AE1852585F00A9FB8C /* ArticleBuilder.m */,
 			);
 			name = "= Model Classes";
 			sourceTree = "<group>";
@@ -319,7 +331,9 @@
 			files = (
 				1CA5E0A3185249CE00A9FB8C /* Article.m in Sources */,
 				1CA5E0AB185251D800A9FB8C /* ArticlesViewController.m in Sources */,
+				1CA5E0AF1852585F00A9FB8C /* ArticleBuilder.m in Sources */,
 				1CA5E06C18522FA300A9FB8C /* ViewController.m in Sources */,
+				1CA5E0B3185263BD00A9FB8C /* ArticleCell.m in Sources */,
 				1CA5E06618522FA300A9FB8C /* AppDelegate.m in Sources */,
 				1CA5E06218522FA300A9FB8C /* main.m in Sources */,
 				1CA5E0901852382300A9FB8C /* GuardianAPIHelper.m in Sources */,
@@ -331,6 +345,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA5E08118522FA300A9FB8C /* Guardian_Networking_SampleTests.m in Sources */,
+				1CA5E0B01852585F00A9FB8C /* ArticleBuilder.m in Sources */,
+				1CA5E0B4185263BD00A9FB8C /* ArticleCell.m in Sources */,
 				1CA5E0AC185251D800A9FB8C /* ArticlesViewController.m in Sources */,
 				1CA5E0911852382300A9FB8C /* GuardianAPIHelper.m in Sources */,
 				1CA5E0A4185249CE00A9FB8C /* Article.m in Sources */,
