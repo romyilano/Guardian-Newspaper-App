@@ -1,11 +1,5 @@
 # GUARDIAN NEWSPAPER NETWORKING SAMPLE
 
-## This Branch
-
-This is a quick and dirty set up
-with a view controller showing the latest key story
-
-
 ## About
 This is a quick and dirty
 Using Mashery's API to make a quick and simple
