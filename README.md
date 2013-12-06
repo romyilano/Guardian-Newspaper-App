@@ -21,5 +21,6 @@ if you want to run this on your phone or the simulator
 # Screenshots so Far
 
 ![Basic Screenshot](Screenshots/Basic/list.png "Basic list")
-![Basic Screenshot of Article](Screenshots/Basic/article.png "Article in a webview"_
+
+![Basic Screenshot of Article](Screenshots/Basic/article.png "Article in a webview")
 
