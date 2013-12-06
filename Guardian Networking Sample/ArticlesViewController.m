@@ -97,13 +97,12 @@
     // Configure the cell...
     if (self.articles.count == 0)
     {
-         cell.textLabel.text = @"Loading";
+         cell.articleTitle.text = @"Loading";
     }
     else
     {
         Article *thisArticle = self.articles[indexPath.row];
-        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:10.0];
-        cell.textLabel.text = thisArticle.webTitle;
+        cell.articleTitle.text = thisArticle.webTitle;
         
     }
     return cell;
