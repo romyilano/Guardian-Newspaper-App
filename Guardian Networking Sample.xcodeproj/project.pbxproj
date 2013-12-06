@@ -31,6 +31,8 @@
 		1CA5E09B1852489200A9FB8C /* iphone-spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0961852489200A9FB8C /* iphone-spotlight@2x.png */; };
 		1CA5E09C1852489200A9FB8C /* iphone-settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0971852489200A9FB8C /* iphone-settings@2x.png */; };
 		1CA5E09D1852489200A9FB8C /* iphone-settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0971852489200A9FB8C /* iphone-settings@2x.png */; };
+		1CA5E0A3185249CE00A9FB8C /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0A2185249CE00A9FB8C /* Article.m */; };
+		1CA5E0A4185249CE00A9FB8C /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0A2185249CE00A9FB8C /* Article.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		1CA5E0951852489200A9FB8C /* iphoneApp-ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphoneApp-ios7@2x.png"; sourceTree = "<group>"; };
 		1CA5E0961852489200A9FB8C /* iphone-spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-spotlight@2x.png"; sourceTree = "<group>"; };
 		1CA5E0971852489200A9FB8C /* iphone-settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-settings@2x.png"; sourceTree = "<group>"; };
+		1CA5E0A1185249CE00A9FB8C /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = Models/Article.h; sourceTree = "<group>"; };
+		1CA5E0A2185249CE00A9FB8C /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = Models/Article.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +135,8 @@
 		1CA5E05B18522FA300A9FB8C /* Guardian Networking Sample */ = {
 			isa = PBXGroup;
 			children = (
-				1CA5E09F185249A000A9FB8C /* =GUI */,
+				1CA5E0A0185249BC00A9FB8C /* = Model Classes */,
+				1CA5E09F185249A000A9FB8C /* = GUI */,
 				1CA5E09E1852499200A9FB8C /* = Graphics */,
 				1CA5E05C18522FA300A9FB8C /* Supporting Files */,
 			);
@@ -178,7 +183,7 @@
 			name = "= Graphics";
 			sourceTree = "<group>";
 		};
-		1CA5E09F185249A000A9FB8C /* =GUI */ = {
+		1CA5E09F185249A000A9FB8C /* = GUI */ = {
 			isa = PBXGroup;
 			children = (
 				1CA5E06418522FA300A9FB8C /* AppDelegate.h */,
@@ -189,7 +194,16 @@
 				1CA5E06A18522FA300A9FB8C /* ViewController.h */,
 				1CA5E06B18522FA300A9FB8C /* ViewController.m */,
 			);
-			name = "=GUI";
+			name = "= GUI";
+			sourceTree = "<group>";
+		};
+		1CA5E0A0185249BC00A9FB8C /* = Model Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5E0A1185249CE00A9FB8C /* Article.h */,
+				1CA5E0A2185249CE00A9FB8C /* Article.m */,
+			);
+			name = "= Model Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CA5E0A3185249CE00A9FB8C /* Article.m in Sources */,
 				1CA5E06C18522FA300A9FB8C /* ViewController.m in Sources */,
 				1CA5E06618522FA300A9FB8C /* AppDelegate.m in Sources */,
 				1CA5E06218522FA300A9FB8C /* main.m in Sources */,
@@ -310,6 +325,7 @@
 			files = (
 				1CA5E08118522FA300A9FB8C /* Guardian_Networking_SampleTests.m in Sources */,
 				1CA5E0911852382300A9FB8C /* GuardianAPIHelper.m in Sources */,
+				1CA5E0A4185249CE00A9FB8C /* Article.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
