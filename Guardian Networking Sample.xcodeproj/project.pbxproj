@@ -25,6 +25,12 @@
 		1CA5E0911852382300A9FB8C /* GuardianAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */; };
 		1CA5E0931852481F00A9FB8C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0921852481F00A9FB8C /* README.md */; };
 		1CA5E0941852481F00A9FB8C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0921852481F00A9FB8C /* README.md */; };
+		1CA5E0981852489200A9FB8C /* iphoneApp-ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0951852489200A9FB8C /* iphoneApp-ios7@2x.png */; };
+		1CA5E0991852489200A9FB8C /* iphoneApp-ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0951852489200A9FB8C /* iphoneApp-ios7@2x.png */; };
+		1CA5E09A1852489200A9FB8C /* iphone-spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0961852489200A9FB8C /* iphone-spotlight@2x.png */; };
+		1CA5E09B1852489200A9FB8C /* iphone-spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0961852489200A9FB8C /* iphone-spotlight@2x.png */; };
+		1CA5E09C1852489200A9FB8C /* iphone-settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0971852489200A9FB8C /* iphone-settings@2x.png */; };
+		1CA5E09D1852489200A9FB8C /* iphone-settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0971852489200A9FB8C /* iphone-settings@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,9 @@
 		1CA5E08E1852382300A9FB8C /* GuardianAPIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianAPIHelper.h; sourceTree = "<group>"; };
 		1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardianAPIHelper.m; sourceTree = "<group>"; };
 		1CA5E0921852481F00A9FB8C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		1CA5E0951852489200A9FB8C /* iphoneApp-ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphoneApp-ios7@2x.png"; sourceTree = "<group>"; };
+		1CA5E0961852489200A9FB8C /* iphone-spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-spotlight@2x.png"; sourceTree = "<group>"; };
+		1CA5E0971852489200A9FB8C /* iphone-settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-settings@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +138,9 @@
 				1CA5E06718522FA300A9FB8C /* Main.storyboard */,
 				1CA5E06A18522FA300A9FB8C /* ViewController.h */,
 				1CA5E06B18522FA300A9FB8C /* ViewController.m */,
+				1CA5E0951852489200A9FB8C /* iphoneApp-ios7@2x.png */,
+				1CA5E0961852489200A9FB8C /* iphone-spotlight@2x.png */,
+				1CA5E0971852489200A9FB8C /* iphone-settings@2x.png */,
 				1CA5E06D18522FA300A9FB8C /* Images.xcassets */,
 				1CA5E05C18522FA300A9FB8C /* Supporting Files */,
 			);
@@ -242,7 +254,10 @@
 			files = (
 				1CA5E06E18522FA300A9FB8C /* Images.xcassets in Resources */,
 				1CA5E06018522FA300A9FB8C /* InfoPlist.strings in Resources */,
+				1CA5E09C1852489200A9FB8C /* iphone-settings@2x.png in Resources */,
+				1CA5E09A1852489200A9FB8C /* iphone-spotlight@2x.png in Resources */,
 				1CA5E0931852481F00A9FB8C /* README.md in Resources */,
+				1CA5E0981852489200A9FB8C /* iphoneApp-ios7@2x.png in Resources */,
 				1CA5E06918522FA300A9FB8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA5E0941852481F00A9FB8C /* README.md in Resources */,
+				1CA5E09D1852489200A9FB8C /* iphone-settings@2x.png in Resources */,
+				1CA5E0991852489200A9FB8C /* iphoneApp-ios7@2x.png in Resources */,
+				1CA5E09B1852489200A9FB8C /* iphone-spotlight@2x.png in Resources */,
 				1CA5E07F18522FA300A9FB8C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
