@@ -86,13 +86,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="41" id="TFZ-8J-1JZ" customClass="ArticleCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="41" id="TFZ-8J-1JZ" customClass="ArticleCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="41"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TFZ-8J-1JZ" id="B9V-jj-6NC">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="40"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="wmn-XM-f1m" kind="push" identifier="DetailSegue" id="1yW-vy-bcF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -105,6 +108,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tQr-9y-7Ki" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1166" y="241"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Hs1-d5-aQR">
+            <objects>
+                <viewController id="wmn-XM-f1m" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kXZ-M1-6j5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="RtZ-Cb-M5n">
+                                <rect key="frame" x="0.0" y="66" width="320" height="523"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wmn-XM-f1m" id="nHy-vB-1Sv"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4TP-PH-DW5"/>
+                    <connections>
+                        <outlet property="webView" destination="RtZ-Cb-M5n" id="mqK-Kc-TVR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a57-5w-Q18" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1570" y="225"/>
         </scene>
         <!--View Controller - Latest iPhone Article-->
         <scene sceneID="ufC-wZ-h7g">
@@ -168,6 +199,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Gc-5L-AA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="129" y="-494"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wPb-34-kBC">
+            <objects>
+                <viewController id="N4r-W1-0Ql" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RbJ-VX-vLj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VO3-cF-E3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

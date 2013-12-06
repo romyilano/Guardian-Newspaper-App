@@ -39,6 +39,8 @@
 		1CA5E0B01852585F00A9FB8C /* ArticleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0AE1852585F00A9FB8C /* ArticleBuilder.m */; };
 		1CA5E0B3185263BD00A9FB8C /* ArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0B2185263BD00A9FB8C /* ArticleCell.m */; };
 		1CA5E0B4185263BD00A9FB8C /* ArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0B2185263BD00A9FB8C /* ArticleCell.m */; };
+		1CA5E0B7185266AB00A9FB8C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0B6185266AB00A9FB8C /* DetailViewController.m */; };
+		1CA5E0B8185266AB00A9FB8C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0B6185266AB00A9FB8C /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		1CA5E0AE1852585F00A9FB8C /* ArticleBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleBuilder.m; sourceTree = "<group>"; };
 		1CA5E0B1185263BD00A9FB8C /* ArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleCell.h; sourceTree = "<group>"; };
 		1CA5E0B2185263BD00A9FB8C /* ArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleCell.m; sourceTree = "<group>"; };
+		1CA5E0B5185266AB00A9FB8C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		1CA5E0B6185266AB00A9FB8C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,8 @@
 				1CA5E0AA185251D800A9FB8C /* ArticlesViewController.m */,
 				1CA5E0B1185263BD00A9FB8C /* ArticleCell.h */,
 				1CA5E0B2185263BD00A9FB8C /* ArticleCell.m */,
+				1CA5E0B5185266AB00A9FB8C /* DetailViewController.h */,
+				1CA5E0B6185266AB00A9FB8C /* DetailViewController.m */,
 			);
 			name = "= GUI";
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 			files = (
 				1CA5E0A3185249CE00A9FB8C /* Article.m in Sources */,
 				1CA5E0AB185251D800A9FB8C /* ArticlesViewController.m in Sources */,
+				1CA5E0B7185266AB00A9FB8C /* DetailViewController.m in Sources */,
 				1CA5E0AF1852585F00A9FB8C /* ArticleBuilder.m in Sources */,
 				1CA5E06C18522FA300A9FB8C /* ViewController.m in Sources */,
 				1CA5E0B3185263BD00A9FB8C /* ArticleCell.m in Sources */,
@@ -350,6 +357,7 @@
 				1CA5E0AC185251D800A9FB8C /* ArticlesViewController.m in Sources */,
 				1CA5E0911852382300A9FB8C /* GuardianAPIHelper.m in Sources */,
 				1CA5E0A4185249CE00A9FB8C /* Article.m in Sources */,
+				1CA5E0B8185266AB00A9FB8C /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,8 @@
 #import "Article.h"
 #import "ArticleCell.h"
 
+#import "DetailViewController.h"
+
 #import "GuardianAPIHelper.h"
 #import "Constants.h"
 
@@ -52,6 +54,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"DetailSegue"])
+    {
+        NSIndexPath *indexpath = [self.tableView indexPathForSelectedRow];
+        NSInteger articleNumber = indexpath.row;
+        Article *thisArticle = self.articles[articleNumber];
+        DetailViewController *detailViewController = segue.destinationViewController;
+        detailViewController.article = thisArticle;
+    }
+  
+    
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -89,10 +105,11 @@
         cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:10.0];
         cell.textLabel.text = thisArticle.webTitle;
         
-        
     }
     return cell;
 }
+
+
 
 /*
 // Override to support conditional editing of the table view.
