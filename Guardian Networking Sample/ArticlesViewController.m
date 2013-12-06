@@ -182,9 +182,7 @@
     [NSURLConnection sendAsynchronousRequest:urlRequest
                                        queue:queue
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                               
-                               // to-do - use the new Articlebuilder to process the reseponse
-                               
+                    
                                NSString *dataString = [[NSString alloc] initWithData:data
                                                                             encoding:NSUTF8StringEncoding];
                                
