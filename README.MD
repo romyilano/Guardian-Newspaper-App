@@ -10,3 +10,8 @@ if you want to run this on your phone or the simulator
 # To-Do
 
 * Model out the JSON response
+
+
+# Helpful Links
+
+* Guardian Content API Explorer: http://explorer.content.guardianapis.com/#/
