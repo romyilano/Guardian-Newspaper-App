@@ -9,10 +9,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIButton *articleButton;
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) NSDictionary *jsonDictionary;
 
 - (IBAction)summonarticlebtnPressed:(UIButton *)sender;

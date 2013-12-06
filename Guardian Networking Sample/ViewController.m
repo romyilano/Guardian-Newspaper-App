@@ -20,6 +20,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.webView.scalesPageToFit = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,10 +63,19 @@
                                    // get the second article
                                    NSDictionary *firstArticle = results[0];
                                    NSString *firstArticleTitle = [firstArticle objectForKey:@"webTitle"];
+                                   NSString *webURL = [firstArticle objectForKey:@"webUrl"];
+                                   NSURL *articleUrl = [NSURL URLWithString:webURL];
+                                   NSURLRequest *requestObj = [NSURLRequest requestWithURL:articleUrl];
                                    
+                                   // get back on the main thread and put the article title in the main view
                                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                                        
                                        self.textView.text = firstArticleTitle;
+                                       
+                                       // load the article in the webview
+                                       [self.webView loadRequest:requestObj];
+                                      
+                                       
                                    }];
                                    
                                }
@@ -120,4 +131,26 @@
 }
 
 
+#pragma mark - UIWebView Delegate Methods
+-(void)webViewDidStartLoad:(UIWebView *)webView
+{
+    // show loading
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    // do something,  stop hud
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    [[[UIAlertView alloc] initWithTitle:@"Sorry@"
+                                message:@"Couldn't load the article from the web"
+                               delegate:self
+                      cancelButtonTitle:nil
+                      otherButtonTitles:@"OK", nil] show];
+    
+    NSLog(@"Web view didn't load, error: %@", error);
+    
+}
 @end

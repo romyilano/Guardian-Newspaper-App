@@ -1,5 +1,6 @@
 # GUARDIAN NEWSPAPER NETWORKING SAMPLE
 
+This is a quick and dirty
 Using Mashery's API to make a quick and simple
 guardian newspaper networking sample
 
