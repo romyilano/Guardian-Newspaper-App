@@ -23,6 +23,8 @@
 		1CA5E08118522FA300A9FB8C /* Guardian_Networking_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E08018522FA300A9FB8C /* Guardian_Networking_SampleTests.m */; };
 		1CA5E08C1852300600A9FB8C /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E08B1852300600A9FB8C /* README.MD */; };
 		1CA5E08D1852300600A9FB8C /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E08B1852300600A9FB8C /* README.MD */; };
+		1CA5E0901852382300A9FB8C /* GuardianAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */; };
+		1CA5E0911852382300A9FB8C /* GuardianAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		1CA5E08018522FA300A9FB8C /* Guardian_Networking_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Guardian_Networking_SampleTests.m; sourceTree = "<group>"; };
 		1CA5E08A18522FF600A9FB8C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		1CA5E08B1852300600A9FB8C /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.MD; sourceTree = "<group>"; };
+		1CA5E08E1852382300A9FB8C /* GuardianAPIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianAPIHelper.h; sourceTree = "<group>"; };
+		1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardianAPIHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				1CA5E06418522FA300A9FB8C /* AppDelegate.h */,
+				1CA5E08E1852382300A9FB8C /* GuardianAPIHelper.h */,
+				1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */,
 				1CA5E06518522FA300A9FB8C /* AppDelegate.m */,
 				1CA5E06718522FA300A9FB8C /* Main.storyboard */,
 				1CA5E06A18522FA300A9FB8C /* ViewController.h */,
@@ -260,6 +266,7 @@
 				1CA5E06C18522FA300A9FB8C /* ViewController.m in Sources */,
 				1CA5E06618522FA300A9FB8C /* AppDelegate.m in Sources */,
 				1CA5E06218522FA300A9FB8C /* main.m in Sources */,
+				1CA5E0901852382300A9FB8C /* GuardianAPIHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA5E08118522FA300A9FB8C /* Guardian_Networking_SampleTests.m in Sources */,
+				1CA5E0911852382300A9FB8C /* GuardianAPIHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
