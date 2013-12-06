@@ -33,6 +33,8 @@
 		1CA5E09D1852489200A9FB8C /* iphone-settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E0971852489200A9FB8C /* iphone-settings@2x.png */; };
 		1CA5E0A3185249CE00A9FB8C /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0A2185249CE00A9FB8C /* Article.m */; };
 		1CA5E0A4185249CE00A9FB8C /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0A2185249CE00A9FB8C /* Article.m */; };
+		1CA5E0AB185251D800A9FB8C /* ArticlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0AA185251D800A9FB8C /* ArticlesViewController.m */; };
+		1CA5E0AC185251D800A9FB8C /* ArticlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0AA185251D800A9FB8C /* ArticlesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		1CA5E0971852489200A9FB8C /* iphone-settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-settings@2x.png"; sourceTree = "<group>"; };
 		1CA5E0A1185249CE00A9FB8C /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = Models/Article.h; sourceTree = "<group>"; };
 		1CA5E0A2185249CE00A9FB8C /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = Models/Article.m; sourceTree = "<group>"; };
+		1CA5E0A9185251D800A9FB8C /* ArticlesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlesViewController.h; sourceTree = "<group>"; };
+		1CA5E0AA185251D800A9FB8C /* ArticlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,8 @@
 				1CA5E06718522FA300A9FB8C /* Main.storyboard */,
 				1CA5E06A18522FA300A9FB8C /* ViewController.h */,
 				1CA5E06B18522FA300A9FB8C /* ViewController.m */,
+				1CA5E0A9185251D800A9FB8C /* ArticlesViewController.h */,
+				1CA5E0AA185251D800A9FB8C /* ArticlesViewController.m */,
 			);
 			name = "= GUI";
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA5E0A3185249CE00A9FB8C /* Article.m in Sources */,
+				1CA5E0AB185251D800A9FB8C /* ArticlesViewController.m in Sources */,
 				1CA5E06C18522FA300A9FB8C /* ViewController.m in Sources */,
 				1CA5E06618522FA300A9FB8C /* AppDelegate.m in Sources */,
 				1CA5E06218522FA300A9FB8C /* main.m in Sources */,
@@ -324,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA5E08118522FA300A9FB8C /* Guardian_Networking_SampleTests.m in Sources */,
+				1CA5E0AC185251D800A9FB8C /* ArticlesViewController.m in Sources */,
 				1CA5E0911852382300A9FB8C /* GuardianAPIHelper.m in Sources */,
 				1CA5E0A4185249CE00A9FB8C /* Article.m in Sources */,
 			);

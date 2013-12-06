@@ -73,6 +73,8 @@
                                        
                                        // load the article in the webview
                                        [self.webView loadRequest:[NSURLRequest requestWithURL:firstArticle.webURL]];
+                                       
+                                       self.title = firstArticle.webTitle;
                                       
                                        
                                    }];
