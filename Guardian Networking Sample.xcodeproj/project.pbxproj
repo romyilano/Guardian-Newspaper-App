@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CA5E05618522FA300A9FB8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05518522FA300A9FB8C /* Foundation.framework */; };
+		1CA5E05818522FA300A9FB8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05718522FA300A9FB8C /* CoreGraphics.framework */; };
+		1CA5E05A18522FA300A9FB8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05918522FA300A9FB8C /* UIKit.framework */; };
+		1CA5E06018522FA300A9FB8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E05E18522FA300A9FB8C /* InfoPlist.strings */; };
+		1CA5E06218522FA300A9FB8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E06118522FA300A9FB8C /* main.m */; };
+		1CA5E06618522FA300A9FB8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E06518522FA300A9FB8C /* AppDelegate.m */; };
+		1CA5E06918522FA300A9FB8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E06718522FA300A9FB8C /* Main.storyboard */; };
+		1CA5E06C18522FA300A9FB8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E06B18522FA300A9FB8C /* ViewController.m */; };
+		1CA5E06E18522FA300A9FB8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E06D18522FA300A9FB8C /* Images.xcassets */; };
+		1CA5E07518522FA300A9FB8C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E07418522FA300A9FB8C /* XCTest.framework */; };
+		1CA5E07618522FA300A9FB8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05518522FA300A9FB8C /* Foundation.framework */; };
+		1CA5E07718522FA300A9FB8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05918522FA300A9FB8C /* UIKit.framework */; };
+		1CA5E07F18522FA300A9FB8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E07D18522FA300A9FB8C /* InfoPlist.strings */; };
+		1CA5E08118522FA300A9FB8C /* Guardian_Networking_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E08018522FA300A9FB8C /* Guardian_Networking_SampleTests.m */; };
+		1CA5E08C1852300600A9FB8C /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E08B1852300600A9FB8C /* README.MD */; };
+		1CA5E08D1852300600A9FB8C /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5E08B1852300600A9FB8C /* README.MD */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CA5E07818522FA300A9FB8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CA5E04A18522FA300A9FB8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CA5E05118522FA300A9FB8C;
+			remoteInfo = "Guardian Networking Sample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1CA5E05218522FA300A9FB8C /* Guardian Networking Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guardian Networking Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CA5E05518522FA300A9FB8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1CA5E05718522FA300A9FB8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1CA5E05918522FA300A9FB8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1CA5E05D18522FA300A9FB8C /* Guardian Networking Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Guardian Networking Sample-Info.plist"; sourceTree = "<group>"; };
+		1CA5E05F18522FA300A9FB8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1CA5E06118522FA300A9FB8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1CA5E06318522FA300A9FB8C /* Guardian Networking Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Guardian Networking Sample-Prefix.pch"; sourceTree = "<group>"; };
+		1CA5E06418522FA300A9FB8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1CA5E06518522FA300A9FB8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1CA5E06818522FA300A9FB8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1CA5E06A18522FA300A9FB8C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1CA5E06B18522FA300A9FB8C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1CA5E06D18522FA300A9FB8C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1CA5E07318522FA300A9FB8C /* Guardian Networking SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Guardian Networking SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CA5E07418522FA300A9FB8C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1CA5E07C18522FA300A9FB8C /* Guardian Networking SampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Guardian Networking SampleTests-Info.plist"; sourceTree = "<group>"; };
+		1CA5E07E18522FA300A9FB8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1CA5E08018522FA300A9FB8C /* Guardian_Networking_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Guardian_Networking_SampleTests.m; sourceTree = "<group>"; };
+		1CA5E08A18522FF600A9FB8C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		1CA5E08B1852300600A9FB8C /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.MD; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CA5E04F18522FA300A9FB8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CA5E05818522FA300A9FB8C /* CoreGraphics.framework in Frameworks */,
+				1CA5E05A18522FA300A9FB8C /* UIKit.framework in Frameworks */,
+				1CA5E05618522FA300A9FB8C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CA5E07018522FA300A9FB8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CA5E07518522FA300A9FB8C /* XCTest.framework in Frameworks */,
+				1CA5E07718522FA300A9FB8C /* UIKit.framework in Frameworks */,
+				1CA5E07618522FA300A9FB8C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CA5E04918522FA300A9FB8C = {
+			isa = PBXGroup;
+			children = (
+				1CA5E08B1852300600A9FB8C /* README.MD */,
+				1CA5E08A18522FF600A9FB8C /* Constants.h */,
+				1CA5E05B18522FA300A9FB8C /* Guardian Networking Sample */,
+				1CA5E07A18522FA300A9FB8C /* Guardian Networking SampleTests */,
+				1CA5E05418522FA300A9FB8C /* Frameworks */,
+				1CA5E05318522FA300A9FB8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CA5E05318522FA300A9FB8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5E05218522FA300A9FB8C /* Guardian Networking Sample.app */,
+				1CA5E07318522FA300A9FB8C /* Guardian Networking SampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CA5E05418522FA300A9FB8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5E05518522FA300A9FB8C /* Foundation.framework */,
+				1CA5E05718522FA300A9FB8C /* CoreGraphics.framework */,
+				1CA5E05918522FA300A9FB8C /* UIKit.framework */,
+				1CA5E07418522FA300A9FB8C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CA5E05B18522FA300A9FB8C /* Guardian Networking Sample */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5E06418522FA300A9FB8C /* AppDelegate.h */,
+				1CA5E06518522FA300A9FB8C /* AppDelegate.m */,
+				1CA5E06718522FA300A9FB8C /* Main.storyboard */,
+				1CA5E06A18522FA300A9FB8C /* ViewController.h */,
+				1CA5E06B18522FA300A9FB8C /* ViewController.m */,
+				1CA5E06D18522FA300A9FB8C /* Images.xcassets */,
+				1CA5E05C18522FA300A9FB8C /* Supporting Files */,
+			);
+			path = "Guardian Networking Sample";
+			sourceTree = "<group>";
+		};
+		1CA5E05C18522FA300A9FB8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5E05D18522FA300A9FB8C /* Guardian Networking Sample-Info.plist */,
+				1CA5E05E18522FA300A9FB8C /* InfoPlist.strings */,
+				1CA5E06118522FA300A9FB8C /* main.m */,
+				1CA5E06318522FA300A9FB8C /* Guardian Networking Sample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1CA5E07A18522FA300A9FB8C /* Guardian Networking SampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5E08018522FA300A9FB8C /* Guardian_Networking_SampleTests.m */,
+				1CA5E07B18522FA300A9FB8C /* Supporting Files */,
+			);
+			path = "Guardian Networking SampleTests";
+			sourceTree = "<group>";
+		};
+		1CA5E07B18522FA300A9FB8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5E07C18522FA300A9FB8C /* Guardian Networking SampleTests-Info.plist */,
+				1CA5E07D18522FA300A9FB8C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CA5E05118522FA300A9FB8C /* Guardian Networking Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CA5E08418522FA300A9FB8C /* Build configuration list for PBXNativeTarget "Guardian Networking Sample" */;
+			buildPhases = (
+				1CA5E04E18522FA300A9FB8C /* Sources */,
+				1CA5E04F18522FA300A9FB8C /* Frameworks */,
+				1CA5E05018522FA300A9FB8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Guardian Networking Sample";
+			productName = "Guardian Networking Sample";
+			productReference = 1CA5E05218522FA300A9FB8C /* Guardian Networking Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1CA5E07218522FA300A9FB8C /* Guardian Networking SampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CA5E08718522FA300A9FB8C /* Build configuration list for PBXNativeTarget "Guardian Networking SampleTests" */;
+			buildPhases = (
+				1CA5E06F18522FA300A9FB8C /* Sources */,
+				1CA5E07018522FA300A9FB8C /* Frameworks */,
+				1CA5E07118522FA300A9FB8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CA5E07918522FA300A9FB8C /* PBXTargetDependency */,
+			);
+			name = "Guardian Networking SampleTests";
+			productName = "Guardian Networking SampleTests";
+			productReference = 1CA5E07318522FA300A9FB8C /* Guardian Networking SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CA5E04A18522FA300A9FB8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Romy Ilano";
+				TargetAttributes = {
+					1CA5E07218522FA300A9FB8C = {
+						TestTargetID = 1CA5E05118522FA300A9FB8C;
+					};
+				};
+			};
+			buildConfigurationList = 1CA5E04D18522FA300A9FB8C /* Build configuration list for PBXProject "Guardian Networking Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1CA5E04918522FA300A9FB8C;
+			productRefGroup = 1CA5E05318522FA300A9FB8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CA5E05118522FA300A9FB8C /* Guardian Networking Sample */,
+				1CA5E07218522FA300A9FB8C /* Guardian Networking SampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CA5E05018522FA300A9FB8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CA5E06E18522FA300A9FB8C /* Images.xcassets in Resources */,
+				1CA5E06018522FA300A9FB8C /* InfoPlist.strings in Resources */,
+				1CA5E08C1852300600A9FB8C /* README.MD in Resources */,
+				1CA5E06918522FA300A9FB8C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CA5E07118522FA300A9FB8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CA5E08D1852300600A9FB8C /* README.MD in Resources */,
+				1CA5E07F18522FA300A9FB8C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CA5E04E18522FA300A9FB8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CA5E06C18522FA300A9FB8C /* ViewController.m in Sources */,
+				1CA5E06618522FA300A9FB8C /* AppDelegate.m in Sources */,
+				1CA5E06218522FA300A9FB8C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CA5E06F18522FA300A9FB8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CA5E08118522FA300A9FB8C /* Guardian_Networking_SampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1CA5E07918522FA300A9FB8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CA5E05118522FA300A9FB8C /* Guardian Networking Sample */;
+			targetProxy = 1CA5E07818522FA300A9FB8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1CA5E05E18522FA300A9FB8C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CA5E05F18522FA300A9FB8C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1CA5E06718522FA300A9FB8C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CA5E06818522FA300A9FB8C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1CA5E07D18522FA300A9FB8C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CA5E07E18522FA300A9FB8C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1CA5E08218522FA300A9FB8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1CA5E08318522FA300A9FB8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CA5E08518522FA300A9FB8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Guardian Networking Sample/Guardian Networking Sample-Prefix.pch";
+				INFOPLIST_FILE = "Guardian Networking Sample/Guardian Networking Sample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1CA5E08618522FA300A9FB8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Guardian Networking Sample/Guardian Networking Sample-Prefix.pch";
+				INFOPLIST_FILE = "Guardian Networking Sample/Guardian Networking Sample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1CA5E08818522FA300A9FB8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Guardian Networking Sample.app/Guardian Networking Sample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Guardian Networking Sample/Guardian Networking Sample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Guardian Networking SampleTests/Guardian Networking SampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1CA5E08918522FA300A9FB8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Guardian Networking Sample.app/Guardian Networking Sample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Guardian Networking Sample/Guardian Networking Sample-Prefix.pch";
+				INFOPLIST_FILE = "Guardian Networking SampleTests/Guardian Networking SampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CA5E04D18522FA300A9FB8C /* Build configuration list for PBXProject "Guardian Networking Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CA5E08218522FA300A9FB8C /* Debug */,
+				1CA5E08318522FA300A9FB8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CA5E08418522FA300A9FB8C /* Build configuration list for PBXNativeTarget "Guardian Networking Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CA5E08518522FA300A9FB8C /* Debug */,
+				1CA5E08618522FA300A9FB8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1CA5E08718522FA300A9FB8C /* Build configuration list for PBXNativeTarget "Guardian Networking SampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CA5E08818522FA300A9FB8C /* Debug */,
+				1CA5E08918522FA300A9FB8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CA5E04A18522FA300A9FB8C /* Project object */;
+}
