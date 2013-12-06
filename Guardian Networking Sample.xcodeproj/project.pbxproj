@@ -131,17 +131,8 @@
 		1CA5E05B18522FA300A9FB8C /* Guardian Networking Sample */ = {
 			isa = PBXGroup;
 			children = (
-				1CA5E06418522FA300A9FB8C /* AppDelegate.h */,
-				1CA5E08E1852382300A9FB8C /* GuardianAPIHelper.h */,
-				1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */,
-				1CA5E06518522FA300A9FB8C /* AppDelegate.m */,
-				1CA5E06718522FA300A9FB8C /* Main.storyboard */,
-				1CA5E06A18522FA300A9FB8C /* ViewController.h */,
-				1CA5E06B18522FA300A9FB8C /* ViewController.m */,
-				1CA5E0951852489200A9FB8C /* iphoneApp-ios7@2x.png */,
-				1CA5E0961852489200A9FB8C /* iphone-spotlight@2x.png */,
-				1CA5E0971852489200A9FB8C /* iphone-settings@2x.png */,
-				1CA5E06D18522FA300A9FB8C /* Images.xcassets */,
+				1CA5E09F185249A000A9FB8C /* =GUI */,
+				1CA5E09E1852499200A9FB8C /* = Graphics */,
 				1CA5E05C18522FA300A9FB8C /* Supporting Files */,
 			);
 			path = "Guardian Networking Sample";
@@ -174,6 +165,31 @@
 				1CA5E07D18522FA300A9FB8C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1CA5E09E1852499200A9FB8C /* = Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5E0951852489200A9FB8C /* iphoneApp-ios7@2x.png */,
+				1CA5E0961852489200A9FB8C /* iphone-spotlight@2x.png */,
+				1CA5E0971852489200A9FB8C /* iphone-settings@2x.png */,
+				1CA5E06D18522FA300A9FB8C /* Images.xcassets */,
+			);
+			name = "= Graphics";
+			sourceTree = "<group>";
+		};
+		1CA5E09F185249A000A9FB8C /* =GUI */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5E06418522FA300A9FB8C /* AppDelegate.h */,
+				1CA5E06518522FA300A9FB8C /* AppDelegate.m */,
+				1CA5E08E1852382300A9FB8C /* GuardianAPIHelper.h */,
+				1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */,
+				1CA5E06718522FA300A9FB8C /* Main.storyboard */,
+				1CA5E06A18522FA300A9FB8C /* ViewController.h */,
+				1CA5E06B18522FA300A9FB8C /* ViewController.m */,
+			);
+			name = "=GUI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
