@@ -36,6 +36,7 @@
 
 - (IBAction)summonarticlebtnPressed:(UIButton *)sender {
     
+    
     // summon the newest iphone article
     NSString *urlAsString = guardianSearchURL;
     // hard coding the iphone search

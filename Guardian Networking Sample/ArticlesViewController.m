@@ -49,7 +49,7 @@
 {
     [super viewWillAppear:animated];
     
-    [self getGuardianArticlesWithSearchTerm:@"travel"];
+    [self getGuardianArticlesWithSearchTerm:@"iPhone"];
 
 }
 
@@ -169,7 +169,8 @@
 #pragma mark - Custom Methods
 -(void)getGuardianArticlesWithSearchTerm:(NSString *)searchTerm
 {
-    // summon the latest guardian article
+   
+    
     NSMutableString *urlAsString = [[NSMutableString alloc] initWithString:guardianSearchURL];
     
     NSString *searchString = [NSString stringWithFormat:@"?q=%@", searchTerm];
