@@ -50,7 +50,7 @@
     [super viewWillAppear:animated];
     
     [self getGuardianArticlesWithSearchTerm:@"travel"];
-    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -181,6 +181,7 @@
     
     NSURL *url = [NSURL URLWithString:urlAsString];
     
+    
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
     [urlRequest setTimeoutInterval:30.0f];
     
@@ -189,9 +190,7 @@
     [NSURLConnection sendAsynchronousRequest:urlRequest
                                        queue:queue
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                               
-                               // to-do - use the new Articlebuilder to process the reseponse
-                               
+                    
                                NSString *dataString = [[NSString alloc] initWithData:data
                                                                             encoding:NSUTF8StringEncoding];
                                
