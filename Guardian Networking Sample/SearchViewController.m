@@ -10,6 +10,7 @@
 
 #import "Article.h"
 #import "ArticleBuilder.h"
+#import "ArticleCell.h"
 
 #import "GuardianAPIHelper.h"
 #import "Constants.h"
@@ -33,6 +34,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.articleBuilder = [[ArticleBuilder alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,6 +63,8 @@
     } else
     {
         
+        [self.textField resignFirstResponder];
+        
         NSString *searchTerm = self.textField.text;
         
         // use the search term to get the json
@@ -71,18 +76,21 @@
 #pragma mark - networking methods
 -(void)getGuardianArticlesWithSearchTerm:(NSString *)searchTerm
 {
-    // get the latest guardian article
-    NSString *urlAsString = guardianSearchURL;
-    NSString *searchString = [NSString stringWithFormat:@"?q=%@", searchTerm];
-    [urlAsString stringByAppendingString:searchString];
     
+    
+    NSMutableString *urlAsString = [[NSMutableString alloc] initWithString:guardianSearchURL];
+    
+    NSString *searchString = [NSString stringWithFormat:@"?q=%@", searchTerm];
     NSString *guardianKeyString = [NSString stringWithFormat:@"&api-key=%@", kGuardianKey];
-    [urlAsString stringByAppendingString:guardianKeyString];
+    
+    // http://content.guardianapis.com/search?q=iphone&api-key=5x23fnrsr4hr23zhe58aawjf
+    [urlAsString appendString:searchString];
+    [urlAsString appendString:guardianKeyString];
     
     NSURL *url = [NSURL URLWithString:urlAsString];
     
-    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
     
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
     [urlRequest setTimeoutInterval:30.0f];
     
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
@@ -91,25 +99,79 @@
                                        queue:queue
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                
-                               NSString *dataAsString = [[NSString alloc] initWithData:data
-                                                                              encoding:NSUTF8StringEncoding];
+                               NSString *dataString = [[NSString alloc] initWithData:data
+                                                                            encoding:NSUTF8StringEncoding];
                                
-                               NSArray *articles = [self.articleBuilder articlesFromJSON:dataAsString
-                                                                                   erorr:connectionError];
-                               if ((self.articles.count != 0) && connectionError ==  nil)
+                               self.articles = [self.articleBuilder articlesFromJSON:dataString
+                                                                               erorr:connectionError];
+                               
+                               
+                               if ((self.articles.count > 0) && connectionError == nil)  // success
                                {
-                                   self.articles = articles;
-                                   NSLog(@"First article is: %@", self.articles[0]);
+                                   /*
+                                   // on the main thread relad the talbe
+                                   [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                       NSNumber *articleCount = [NSNumber numberWithUnsignedLong:(unsigned long)self.articles.count];
+                                       self.title = [NSString stringWithFormat:@"%@ articles", articleCount];
+                                       [self.tableView reloadData];
+                                       
+                                   }];
+                                    */
                                    
+                                   // got the articles
+                                   NSLog(@"%@ are the articles", self.articles);
                                    
+                                   // on main thread
+                                   [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                       
+                                       //
+                                       [self.tableView reloadData];
+                                       
+                                   }];
                                }
                                
                            }];
-     
+    
 }
 
+#pragma mark - UITextView Datasource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    
+    return 1;
+    
+}
 
-#pragma mark - UITextView Delegate Methods
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (self.articles.count < 1)
+    {
+        return 1;
+    }
+    else {
+        
+        return self.articles.count;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    ArticleCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    if (self.articles.count == 0)
+    {
+        cell.articleTitle.text = @"Loading";
+    }
+    else
+    {
+        Article *thisArticle = self.articles[indexPath.row];
+        cell.articleTitle.text = thisArticle.webTitle;
+        
+    }
+    return cell;
+}
 
 #pragma mark - UITableView Delegate and Datasource Methods
 
