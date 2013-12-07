@@ -43,8 +43,13 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     _articleBuilder = [[ArticleBuilder alloc] init];
     
-    [self getGuardianArticlesWithSearchTerm:@"celebrity"];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
+    [self getGuardianArticlesWithSearchTerm:@"travel"];
     
 }
 
@@ -165,12 +170,14 @@
 -(void)getGuardianArticlesWithSearchTerm:(NSString *)searchTerm
 {
     // summon the latest guardian article
-    NSString *urlAsString = guardianSearchURL;
+    NSMutableString *urlAsString = [[NSMutableString alloc] initWithString:guardianSearchURL];
+    
     NSString *searchString = [NSString stringWithFormat:@"?q=%@", searchTerm];
     NSString *guardianKeyString = [NSString stringWithFormat:@"&api-key=%@", kGuardianKey];
     
-    [urlAsString stringByAppendingString:searchString];
-    [urlAsString stringByAppendingString:guardianKeyString];
+    // http://content.guardianapis.com/search?q=iphone&api-key=5x23fnrsr4hr23zhe58aawjf
+    [urlAsString appendString:searchString];
+    [urlAsString appendString:guardianKeyString];
     
     NSURL *url = [NSURL URLWithString:urlAsString];
     
