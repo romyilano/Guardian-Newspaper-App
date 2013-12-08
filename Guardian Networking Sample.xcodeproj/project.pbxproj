@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C26620418550463001F982E /* button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2661F918550463001F982E /* button_back.png */; };
+		1C26620518550463001F982E /* button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2661FA18550463001F982E /* button_normal.png */; };
+		1C26620618550463001F982E /* cell_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2661FB18550463001F982E /* cell_bottom.png */; };
+		1C26620718550463001F982E /* cell_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2661FC18550463001F982E /* cell_bottom@2x.png */; };
+		1C26620818550463001F982E /* cell_middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2661FD18550463001F982E /* cell_middle.png */; };
+		1C26620918550463001F982E /* cell_middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2661FE18550463001F982E /* cell_middle@2x.png */; };
+		1C26620A18550463001F982E /* cell_top_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2661FF18550463001F982E /* cell_top_tile.png */; };
+		1C26620B18550463001F982E /* cell_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C26620018550463001F982E /* cell_top.png */; };
+		1C26620C18550463001F982E /* cell_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C26620118550463001F982E /* cell_top@2x.png */; };
+		1C26620D18550463001F982E /* common_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C26620218550463001F982E /* common_bg.png */; };
+		1C26620E18550463001F982E /* common_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C26620318550463001F982E /* common_bg@2x.png */; };
 		1CA5E05618522FA300A9FB8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05518522FA300A9FB8C /* Foundation.framework */; };
 		1CA5E05818522FA300A9FB8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05718522FA300A9FB8C /* CoreGraphics.framework */; };
 		1CA5E05A18522FA300A9FB8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05918522FA300A9FB8C /* UIKit.framework */; };
@@ -56,6 +67,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C2661F918550463001F982E /* button_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_back.png; sourceTree = "<group>"; };
+		1C2661FA18550463001F982E /* button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_normal.png; sourceTree = "<group>"; };
+		1C2661FB18550463001F982E /* cell_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bottom.png; sourceTree = "<group>"; };
+		1C2661FC18550463001F982E /* cell_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_bottom@2x.png"; sourceTree = "<group>"; };
+		1C2661FD18550463001F982E /* cell_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_middle.png; sourceTree = "<group>"; };
+		1C2661FE18550463001F982E /* cell_middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_middle@2x.png"; sourceTree = "<group>"; };
+		1C2661FF18550463001F982E /* cell_top_tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_top_tile.png; sourceTree = "<group>"; };
+		1C26620018550463001F982E /* cell_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_top.png; sourceTree = "<group>"; };
+		1C26620118550463001F982E /* cell_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_top@2x.png"; sourceTree = "<group>"; };
+		1C26620218550463001F982E /* common_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_bg.png; sourceTree = "<group>"; };
+		1C26620318550463001F982E /* common_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bg@2x.png"; sourceTree = "<group>"; };
 		1CA5E05218522FA300A9FB8C /* Guardian Networking Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guardian Networking Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA5E05518522FA300A9FB8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1CA5E05718522FA300A9FB8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +142,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C2661F718550437001F982E /* = Icons */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5E0951852489200A9FB8C /* iphoneApp-ios7@2x.png */,
+				1CA5E0961852489200A9FB8C /* iphone-spotlight@2x.png */,
+				1CA5E0971852489200A9FB8C /* iphone-settings@2x.png */,
+			);
+			name = "= Icons";
+			sourceTree = "<group>";
+		};
+		1C2661F818550451001F982E /* = Fancy TableView Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				1C2661F918550463001F982E /* button_back.png */,
+				1C2661FA18550463001F982E /* button_normal.png */,
+				1C2661FB18550463001F982E /* cell_bottom.png */,
+				1C2661FC18550463001F982E /* cell_bottom@2x.png */,
+				1C2661FD18550463001F982E /* cell_middle.png */,
+				1C2661FE18550463001F982E /* cell_middle@2x.png */,
+				1C2661FF18550463001F982E /* cell_top_tile.png */,
+				1C26620018550463001F982E /* cell_top.png */,
+				1C26620118550463001F982E /* cell_top@2x.png */,
+				1C26620218550463001F982E /* common_bg.png */,
+				1C26620318550463001F982E /* common_bg@2x.png */,
+			);
+			name = "= Fancy TableView Graphics";
+			sourceTree = "<group>";
+		};
 		1CA5E04918522FA300A9FB8C = {
 			isa = PBXGroup;
 			children = (
@@ -195,10 +245,9 @@
 		1CA5E09E1852499200A9FB8C /* = Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				1CA5E0951852489200A9FB8C /* iphoneApp-ios7@2x.png */,
-				1CA5E0961852489200A9FB8C /* iphone-spotlight@2x.png */,
-				1CA5E0971852489200A9FB8C /* iphone-settings@2x.png */,
+				1C2661F718550437001F982E /* = Icons */,
 				1CA5E06D18522FA300A9FB8C /* Images.xcassets */,
+				1C2661F818550451001F982E /* = Fancy TableView Graphics */,
 			);
 			name = "= Graphics";
 			sourceTree = "<group>";
@@ -345,13 +394,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C26620518550463001F982E /* button_normal.png in Resources */,
 				1CA5E06E18522FA300A9FB8C /* Images.xcassets in Resources */,
 				1CA5E06018522FA300A9FB8C /* InfoPlist.strings in Resources */,
 				1CA5E09C1852489200A9FB8C /* iphone-settings@2x.png in Resources */,
+				1C26620B18550463001F982E /* cell_top.png in Resources */,
+				1C26620818550463001F982E /* cell_middle.png in Resources */,
+				1C26620918550463001F982E /* cell_middle@2x.png in Resources */,
 				1CA5E09A1852489200A9FB8C /* iphone-spotlight@2x.png in Resources */,
 				1CA5E0931852481F00A9FB8C /* README.md in Resources */,
 				1CA5E0981852489200A9FB8C /* iphoneApp-ios7@2x.png in Resources */,
+				1C26620418550463001F982E /* button_back.png in Resources */,
+				1C26620618550463001F982E /* cell_bottom.png in Resources */,
+				1C26620E18550463001F982E /* common_bg@2x.png in Resources */,
+				1C26620A18550463001F982E /* cell_top_tile.png in Resources */,
 				1CA5E06918522FA300A9FB8C /* Main.storyboard in Resources */,
+				1C26620C18550463001F982E /* cell_top@2x.png in Resources */,
+				1C26620718550463001F982E /* cell_bottom@2x.png in Resources */,
+				1C26620D18550463001F982E /* common_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +659,7 @@
 				1CA5E08618522FA300A9FB8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CA5E08718522FA300A9FB8C /* Build configuration list for PBXNativeTarget "Guardian Networking SampleTests" */ = {
 			isa = XCConfigurationList;
@@ -607,6 +668,7 @@
 				1CA5E08918522FA300A9FB8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
