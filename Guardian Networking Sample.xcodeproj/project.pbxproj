@@ -22,6 +22,7 @@
 		1C26621418550871001F982E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C26621318550871001F982E /* QuartzCore.framework */; };
 		1C2662161855087B001F982E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2662151855087B001F982E /* CoreData.framework */; };
 		1C26621818550884001F982E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C26621718550884001F982E /* CoreText.framework */; };
+		1C26621B185508AD001F982E /* GuardianManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C26621A185508AD001F982E /* GuardianManager.m */; };
 		1CA5E05618522FA300A9FB8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05518522FA300A9FB8C /* Foundation.framework */; };
 		1CA5E05818522FA300A9FB8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05718522FA300A9FB8C /* CoreGraphics.framework */; };
 		1CA5E05A18522FA300A9FB8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05918522FA300A9FB8C /* UIKit.framework */; };
@@ -87,6 +88,8 @@
 		1C26621318550871001F982E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1C2662151855087B001F982E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1C26621718550884001F982E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		1C266219185508AD001F982E /* GuardianManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianManager.h; sourceTree = "<group>"; };
+		1C26621A185508AD001F982E /* GuardianManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardianManager.m; sourceTree = "<group>"; };
 		1CA5E05218522FA300A9FB8C /* Guardian Networking Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guardian Networking Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA5E05518522FA300A9FB8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1CA5E05718522FA300A9FB8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -182,11 +185,13 @@
 			name = "= Fancy TableView Graphics";
 			sourceTree = "<group>";
 		};
-		1C2662121855082A001F982E /* = Networking */ = {
+		1C2662121855082A001F982E /* = AppLogic + Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1C266219185508AD001F982E /* GuardianManager.h */,
+				1C26621A185508AD001F982E /* GuardianManager.m */,
 			);
-			name = "= Networking";
+			name = "= AppLogic + Networking";
 			sourceTree = "<group>";
 		};
 		1CA5E04918522FA300A9FB8C = {
@@ -226,7 +231,7 @@
 		1CA5E05B18522FA300A9FB8C /* Guardian Networking Sample */ = {
 			isa = PBXGroup;
 			children = (
-				1C2662121855082A001F982E /* = Networking */,
+				1C2662121855082A001F982E /* = AppLogic + Networking */,
 				1CA5E0A0185249BC00A9FB8C /*  = Model + More */,
 				1CA5E09F185249A000A9FB8C /* = GUI */,
 				1CA5E09E1852499200A9FB8C /* = Graphics */,
@@ -465,6 +470,7 @@
 				1CA5E0B7185266AB00A9FB8C /* DetailViewController.m in Sources */,
 				1CA5E0AF1852585F00A9FB8C /* ArticleBuilder.m in Sources */,
 				1C26621118550814001F982E /* ResultsViewController.m in Sources */,
+				1C26621B185508AD001F982E /* GuardianManager.m in Sources */,
 				1CA5E06C18522FA300A9FB8C /* ViewController.m in Sources */,
 				1CA5E0B3185263BD00A9FB8C /* ArticleCell.m in Sources */,
 				1CA5E06618522FA300A9FB8C /* AppDelegate.m in Sources */,

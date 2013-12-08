@@ -170,6 +170,7 @@
  */
 
 #pragma mark - Custom Methods
+// romy - to-do - replace this with a method on the GuardianManager class
 -(void)getGuardianArticlesWithSearchTerm:(NSString *)searchTerm
 {
    
