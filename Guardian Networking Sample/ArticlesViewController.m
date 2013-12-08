@@ -109,6 +109,9 @@
         Article *thisArticle = self.articles[indexPath.row];
         cell.articleTitle.text = thisArticle.webTitle;
         
+        // customize the cell background
+        
+        
     }
     return cell;
 }
