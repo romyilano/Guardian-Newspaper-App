@@ -124,8 +124,8 @@
                                    // on main thread
                                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                                        
-                                       //
-                                       [self.tableView reloadData];
+                                       // do stuff in the UI
+                                      
                                        
                                    }];
                                }

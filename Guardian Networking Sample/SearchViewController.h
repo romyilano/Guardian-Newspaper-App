@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchViewController : UIViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface SearchViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIButton *clearButton;
@@ -17,7 +17,6 @@
 
 @property (strong, nonatomic) NSArray *articles;
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)goButtonPressed:(UIButton *)sender;
 - (IBAction)clearButtonPressed:(UIButton *)sender;
 

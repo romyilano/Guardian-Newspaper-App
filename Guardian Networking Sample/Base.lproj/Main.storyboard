@@ -231,11 +231,6 @@
                                     <action selector="clearButtonPressed:" destination="iX2-W0-r6F" eventType="touchUpInside" id="H2p-OT-0Q9"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TIm-1M-Ucw">
-                                <rect key="frame" x="20" y="230" width="290" height="284"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -244,7 +239,6 @@
                         <outlet property="clearButton" destination="Red-Oi-OOc" id="jV3-do-coi"/>
                         <outlet property="goButton" destination="O1h-xa-x6k" id="77x-qd-HZv"/>
                         <outlet property="searchLabel" destination="UAv-aQ-yWy" id="U6X-fK-LGL"/>
-                        <outlet property="tableView" destination="TIm-1M-Ucw" id="pNR-tm-R6E"/>
                         <outlet property="textField" destination="sW2-Cf-EZj" id="eUb-lY-n1P"/>
                     </connections>
                 </viewController>
