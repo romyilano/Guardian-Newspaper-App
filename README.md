@@ -1,7 +1,12 @@
 # GUARDIAN NEWSPAPER NETWORKING SAMPLE
 
+## This Branch
+Doesn't use AFNetworking
+Making a switch AFNetworking on the master branch
+
 ## About
 This is a quick and dirty
+
 Using Mashery's API to make a quick and simple
 guardian newspaper networking sample
 
