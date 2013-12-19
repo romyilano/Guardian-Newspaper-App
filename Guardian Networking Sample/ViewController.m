@@ -9,11 +9,13 @@
 
 #import "ViewController.h"
 #import "GuardianAPIHelper.h"
+#import "GuardianManager.h"
 #import "Constants.h"
 #import "Article.h"
+#import "ArticleBuilder.h"
 
 @interface ViewController ()
-
+@property (strong, nonatomic) ArticleBuilder *articleBuilder;
 @end
 
 @implementation ViewController
@@ -37,6 +39,9 @@
 - (IBAction)summonarticlebtnPressed:(UIButton *)sender {
     
     
+    // romy - replacing much of this with new app logic class GuardianManager
+    
+    /*
     // summon the newest iphone article
     NSString *urlAsString = guardianSearchURL;
     // hard coding the iphone search
@@ -91,6 +96,9 @@
                                }
                            }];
 
+     */
+    
+    
     
 }
 
