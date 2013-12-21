@@ -12,4 +12,6 @@
 
 // guardian search url
 NSString *const guardianSearchURL = @"http://content.guardianapis.com/search";
+NSString *const guardianBaseURL = @"http://content.guardianapis.com/";
+
 @end
