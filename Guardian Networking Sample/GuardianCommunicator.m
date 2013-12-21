@@ -37,7 +37,7 @@
 
 -(void)searchForArticlesWithSearchTerm:(NSString *)searchTerm
 {
-    [self fetchContentAtURL:[NSURL URLWithString:[NSString stringWithFormat:KGu]] errorHandler:<#^(NSError *error)errorBlock#> successHandler:<#^(NSString *objectNotation)successBlock#>]
+  //
 }
 
 @end
