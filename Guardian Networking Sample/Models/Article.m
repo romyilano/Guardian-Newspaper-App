@@ -25,46 +25,52 @@
         _webURLAsString = webURLAsString;
         _apiURLAsString = apiURLasString;
         _webPublicationDateAsString = webPublicationDateAsString;
-      
-        // set url
-        _webURL = [NSURL URLWithString:_webURLAsString];
-        _apiURL = [NSURL URLWithString:_apiURLAsString];
-        
-        // set the date
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateStyle:NSDateFormatterShortStyle];
-        NSDate *shortDate = [dateFormatter dateFromString:_webPublicationDateAsString];
-        
-        _webPublicationDate = shortDate;
-        
     }
     return self;
 }
 
 -(id)initWithDictionary:(NSDictionary *)dictionaryJSON
 {
-    if (self = [super init])
+    
+    return [self initWithArticleID:dictionaryJSON[@"apiUrl"]
+                         sectionID:dictionaryJSON[@"sectionId"]
+                          webTitle:dictionaryJSON[@"webTitle"]
+                    webURLAsString:dictionaryJSON[@"webUrl"]
+                    apiURLAsString:dictionaryJSON[@"apiUrl"]
+        webPublicationDateAsString:dictionaryJSON[@"webPublicationDate"]];
+    
+}
+
+#pragma mark - setters + getters
+-(NSDate *)webPublicationDate
+{
+    if (!_webPublicationDate)
     {
-        _articleId = dictionaryJSON[@"apiUrl"];
-        _sectionId = dictionaryJSON[@"sectionId"];
-        _webTitle = dictionaryJSON[@"webTitle"];
-        _webURLAsString = dictionaryJSON[@"webUrl"];
-        _apiURLAsString = dictionaryJSON[@"apiUrl"];
-        _webPublicationDateAsString = dictionaryJSON[@"webPublicationDate"];
-        
-        // set url
-        _webURL = [NSURL URLWithString:_webURLAsString];
-        _apiURL = [NSURL URLWithString:_apiURLAsString];
-        
-        // set the date
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        NSDateFormatter  *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+        // what if there isn't a web publican date as string? to-do
         NSDate *shortDate = [dateFormatter dateFromString:_webPublicationDateAsString];
-        
         _webPublicationDate = shortDate;
     }
-    
-    return self;
+    return _webPublicationDate;
+}
+
+-(NSURL *)webURL
+{
+    if (!_webURL)
+    {
+        _webURL = [NSURL URLWithString:_webURLAsString];
+    }
+    return _webURL;
+}
+
+-(NSURL*)apiURL
+{
+    if (!_apiURL)
+    {
+        _apiURL = [NSURL URLWithString:_apiURLAsString];
+    }
+    return _apiURL;
 }
 
 
