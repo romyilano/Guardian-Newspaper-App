@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface GuardianController : NSObject
-
++ (id)sharedController;
 @end
