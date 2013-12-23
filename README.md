@@ -23,9 +23,3 @@ if you want to run this on your phone or the simulator
 
 * Guardian Content API Explorer: http://explorer.content.guardianapis.com/#/
 
-# Screenshots so Far
-
-![Basic Screenshot](Screenshots/Basic/list.png "Basic list")
-
-![Basic Screenshot of Article](Screenshots/Basic/article.png "Article in a webview")
-
