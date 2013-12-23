@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Guardian Networking Sample/Models/Article.m"
-            timestampString = "409509262.569816"
+            timestampString = "409518186.181263"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "-webPublicanDateAsStringForPresentation"
             landmarkType = "5">
          </BreakpointContent>
@@ -52,12 +52,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Guardian Networking Sample/BasicSearchViewController.m"
-            timestampString = "409469369.632559"
+            timestampString = "409517254.302214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "-searchBtnPressed:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Guardian Networking Sample/GuardianController.m"
+            timestampString = "409517132.918618"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "-loadArticlesWithSearchTerm:andParameters:results:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

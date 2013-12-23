@@ -10,18 +10,10 @@
 
 @implementation Fields
 
-+(Fields *)fieldFromJSONDict:(NSDictionary *)jsonDict
++(Fields *)fieldsWithJSONDictionary:(NSDictionary *)JSONDictionary
 {
-    return [self initWithHeadline:JSONDictionary[@"headline"]
-                        trailText:JSONDictionary[@"trailText"]
-                       standFirst:JSONDictionary[@"standFirst"]
-                 shortURLAsString:JSONDictionary[@"shortUrl"]
-             thumbnailURLAsString:JSONDictionary[@"thumbnail"]
-         lastModifiedDateAsString:JSONDictionary[@"lastModified"]
-                wordCountAsString:JSONDictionary[@"wordcount"]
-     newspaperEditionDateAsString:JSONDictionary[@"newspaperEditionDate"]
-      newspaperPageNumberAsString:JSONDictionary[@"newspaperPageNumber"]
-              commentableAsString:JSONDictionary[@"commentable"]];
+    Fields *fields = [[Fields alloc] initWithJSONDictionary:JSONDictionary];
+    return fields;
 }
 
 -(id)initWithHeadline:(NSString *)headline
@@ -48,6 +40,17 @@ newspaperPageNumberAsString:(NSString *)newspaperPageNumberAsString
         _newspaperEditionDateAsString = newspaperEditionDateAsString;
         _newspaperPageNumberAsString = newspaperPageNumberAsString;
         _commentableAsString = commentableAsString;
+        
+        _shortURL = [NSURL URLWithString:_shortURLAsString];
+        _thumbnailURL = [NSURL URLWithString:_thumbnailURLAsString];
+        
+        _commentable = [_commentableAsString isEqualToString:@"true"] ? YES : NO;
+        _lastModifiedDate = [self formatShortDateFromString:_lastModifiedDateAsString];
+        
+        _wordCount = [NSNumber numberWithInt:[_wordcountAsString integerValue]];
+        
+        // to-do: newspaper editation date
+        // to-do - newpspaer page number
         
     }
     return self;
@@ -115,5 +118,26 @@ newspaperPageNumberAsString:(NSString *)newspaperPageNumberAsString
     return _commentable;
 }
 
+-(NSNumber *)wordCount
+{
+    if (!_wordCount)
+    {
+        _wordCount = [NSNumber numberWithInt:[_wordcountAsString integerValue]];
+    }
+    
+    return _wordCount;
+}
+
+#pragma mark - DateFormat Helper
+-(NSDate *)formatShortDateFromString:(NSString *)dateAsString
+{
+    NSDateFormatter  *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+    
+    NSDate *shortDate = [dateFormatter dateFromString:dateAsString];
+    return shortDate;
+}
 
 @end

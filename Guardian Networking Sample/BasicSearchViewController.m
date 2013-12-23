@@ -81,8 +81,6 @@
                                                 if (!error && results.count > 0)
                                                 {
                                                     
-                                                    
-                                                    
                                                     [MBProgressHUD hideHUDForView:self.view animated:YES];
                                                     
                                                     self.articles = results;

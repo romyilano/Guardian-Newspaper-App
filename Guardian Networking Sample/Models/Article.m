@@ -29,8 +29,21 @@
         _webPublicationDateAsString = webPublicationDateAsString;
         _fieldDictionary = fieldDict;
         
-        // this should be a getter to-do
-        _fields = [[Fields alloc] initWithJSONDictionary:_fieldDictionary];
+        _webURL = [NSURL URLWithString:_webURLAsString];
+        _apiURL = [NSURL URLWithString:_apiURLAsString];
+        
+        _fields = [Fields fieldsWithJSONDictionary:_fieldDictionary];
+        
+        NSDateFormatter  *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"];
+        [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+        [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+        
+        NSDate *shortDate = [dateFormatter dateFromString:_webPublicationDateAsString];
+        _webPublicationDate = shortDate;
+        
+        
+
     }
     return self;
 }
@@ -58,7 +71,6 @@
         [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
         [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
        
-        // what if there isn't a web publican date as string? to-do
         NSDate *shortDate = [dateFormatter dateFromString:_webPublicationDateAsString];
         _webPublicationDate = shortDate;
     }
@@ -105,6 +117,14 @@
     return _apiURL;
 }
 
-
+-(Fields *)fields
+{
+    if (!_fields)
+    {
+        _fields = [Fields fieldsWithJSONDictionary:_fieldDictionary];
+    }
+    
+    return _fields;
+}
 
 @end

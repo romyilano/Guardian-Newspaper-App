@@ -33,6 +33,9 @@
 @property (strong, nonatomic) NSDate *lastModifiedDate;
 @property (strong, nonatomic) NSNumber *wordCount;
 
+
++(Fields *)fieldsWithJSONDictionary:(NSDictionary *)JSONDictionary;
+
 -(id)initWithHeadline:(NSString *)headline
             trailText:(NSString *)trailText
            standFirst:(NSString *)standfirst
@@ -45,8 +48,6 @@ newspaperPageNumberAsString:(NSString *)newspaperPageNumberAsString
   commentableAsString:(NSString *)commentableAsString;
 
 -(id)initWithJSONDictionary:(NSDictionary*)JSONDictionary;
-
-+(Fields *)fieldFromJSONDict:(NSDictionary *)jsonDict;
 
 
 @end
