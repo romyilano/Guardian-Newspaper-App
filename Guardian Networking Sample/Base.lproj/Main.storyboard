@@ -209,13 +209,23 @@
                     <view key="view" contentMode="scaleToFill" id="4Xg-Mg-gVl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="1Oo-4c-ois">
+                                <rect key="frame" x="0.0" y="65" width="320" height="565"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="46x-Av-Rhu"/>
+                    <connections>
+                        <outlet property="webView" destination="1Oo-4c-ois" id="cXn-Do-yta"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0W-2W-LpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2363" y="-730"/>
+            <point key="canvasLocation" x="2232" y="-771"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="w4f-ff-fvI">

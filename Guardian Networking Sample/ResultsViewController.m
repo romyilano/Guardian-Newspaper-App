@@ -96,7 +96,6 @@
         ArticleViewController *articleViewController = (ArticleViewController *)segue.destinationViewController;
         
         articleViewController.article = selectedArticle;
-        
     }
 }
 

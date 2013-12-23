@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Article.h"
 
-@interface ArticleViewController : UIViewController
+@interface ArticleViewController : UIViewController <UIWebViewDelegate>
+
 @property (strong, nonatomic) Article *article;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @end

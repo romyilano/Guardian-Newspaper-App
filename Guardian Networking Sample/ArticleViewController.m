@@ -29,13 +29,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"Guardian Article";
+    self.webView.scalesPageToFit = YES;
+    
+    // make sure the webview fills the entire screen
+    CGRect webViewFrame = [[self view] frame];
+    self.webView.frame = webViewFrame;
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
     
-  
+    [self.webView loadRequest:[NSURLRequest requestWithURL:self.article.webURL]];
+    
 }
 
 - (void)didReceiveMemoryWarning
