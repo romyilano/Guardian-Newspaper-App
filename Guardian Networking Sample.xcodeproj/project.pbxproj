@@ -50,6 +50,7 @@
 		1CA5E0A4185249CE00A9FB8C /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0A2185249CE00A9FB8C /* Article.m */; };
 		1CA5E0AF1852585F00A9FB8C /* ArticleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0AE1852585F00A9FB8C /* ArticleBuilder.m */; };
 		1CA5E0B01852585F00A9FB8C /* ArticleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0AE1852585F00A9FB8C /* ArticleBuilder.m */; };
+		1CA6595C1867D851008C669B /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6595B1867D851008C669B /* ArticleViewController.m */; };
 		1CFBEB6D1865EE6900B51A16 /* GuardianController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFBEB6C1865EE6900B51A16 /* GuardianController.m */; };
 		1CFBEB701865EE9B00B51A16 /* GuardianAFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFBEB6F1865EE9B00B51A16 /* GuardianAFHTTPClient.m */; };
 		1CFDEB1E1867B27600BD3041 /* BasicSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFDEB1D1867B27600BD3041 /* BasicSearchViewController.m */; };
@@ -114,6 +115,8 @@
 		1CA5E0A2185249CE00A9FB8C /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = Models/Article.m; sourceTree = "<group>"; };
 		1CA5E0AD1852585F00A9FB8C /* ArticleBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleBuilder.h; sourceTree = "<group>"; };
 		1CA5E0AE1852585F00A9FB8C /* ArticleBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleBuilder.m; sourceTree = "<group>"; };
+		1CA6595A1867D850008C669B /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
+		1CA6595B1867D851008C669B /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
 		1CFBEB6B1865EE6900B51A16 /* GuardianController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianController.h; sourceTree = "<group>"; };
 		1CFBEB6C1865EE6900B51A16 /* GuardianController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardianController.m; sourceTree = "<group>"; };
 		1CFBEB6E1865EE9B00B51A16 /* GuardianAFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianAFHTTPClient.h; sourceTree = "<group>"; };
@@ -328,6 +331,8 @@
 				1C26621018550814001F982E /* ResultsViewController.m */,
 				1C64F12D1867D26A00DD75A2 /* ResultCell.h */,
 				1C64F12E1867D26A00DD75A2 /* ResultCell.m */,
+				1CA6595A1867D850008C669B /* ArticleViewController.h */,
+				1CA6595B1867D851008C669B /* ArticleViewController.m */,
 			);
 			name = "= Basic Search";
 			sourceTree = "<group>";
@@ -486,6 +491,7 @@
 				1CA5E0A3185249CE00A9FB8C /* Article.m in Sources */,
 				1CA5E0AF1852585F00A9FB8C /* ArticleBuilder.m in Sources */,
 				1C26621118550814001F982E /* ResultsViewController.m in Sources */,
+				1CA6595C1867D851008C669B /* ArticleViewController.m in Sources */,
 				1CFBEB6D1865EE6900B51A16 /* GuardianController.m in Sources */,
 				1CFBEB701865EE9B00B51A16 /* GuardianAFHTTPClient.m in Sources */,
 				1CA5E06618522FA300A9FB8C /* AppDelegate.m in Sources */,

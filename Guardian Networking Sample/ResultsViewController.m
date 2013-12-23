@@ -8,6 +8,8 @@
 
 #import "ResultsViewController.h"
 #import "GuardianController.h"
+
+#import "ArticleViewController.h"
 #import "ResultCell.h"
 
 #import "Article.h"
@@ -86,6 +88,16 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"ArticleSegue"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Article *selectedArticle = self.passedArticles[indexPath.row];
+        
+        ArticleViewController *articleViewController = (ArticleViewController *)segue.destinationViewController;
+        
+        articleViewController.article = selectedArticle;
+        
+    }
 }
 
 

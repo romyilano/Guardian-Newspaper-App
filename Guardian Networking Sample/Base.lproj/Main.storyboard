@@ -4,29 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - About-->
-        <scene sceneID="gIm-vW-LHi">
-            <objects>
-                <viewController title="About" id="UZ9-he-dGY" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oV0-2Z-RBH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick and dirty sample networking app featuring articles from the Guardian Newspaper." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7DQ-l7-tCM">
-                                <rect key="frame" x="43" y="99" width="234" height="173"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="About" id="QDp-k9-hIP"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EFl-7o-hCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2526" y="-5292"/>
-        </scene>
         <!--Table View Controller-->
         <scene sceneID="8YX-qY-XoE">
             <objects>
@@ -192,11 +169,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResultCell" rowHeight="86" id="ZPQ-QC-xv9" customClass="ResultCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResultCell" rowHeight="86" id="ZPQ-QC-xv9" customClass="ResultCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="86"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZPQ-QC-xv9" id="mBC-vZ-Ty1">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guardian Article" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RvX-cO-HDW">
@@ -210,6 +187,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="articleTitleLabel" destination="RvX-cO-HDW" id="Wlv-WV-g3N"/>
+                                    <segue destination="mY3-8N-Qzt" kind="push" identifier="ArticleSegue" id="R4j-bJ-ULh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -223,6 +201,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gz-5T-hUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1815" y="-755"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="NsX-Ja-uxD">
+            <objects>
+                <viewController id="mY3-8N-Qzt" customClass="ArticleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Xg-Mg-gVl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="46x-Av-Rhu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0W-2W-LpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2363" y="-730"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="w4f-ff-fvI">
