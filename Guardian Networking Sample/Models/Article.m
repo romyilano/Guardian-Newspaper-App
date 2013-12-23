@@ -99,5 +99,14 @@
     return _apiURL;
 }
 
+-(Fields *)fields
+{
+    if (_fields)
+    {
+        //
+        
+    }
+    return _fields;
+}
 
 @end

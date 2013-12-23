@@ -16,9 +16,8 @@
 #import "GuardianAPIHelper.h"
 
 @interface GuardianController ()
-
 @property (strong, nonatomic) NSDictionary *defaultParameters;
-
+-(NSArray *)articlesFromJSONResponseObject:(id)responseObject;
 @end
 
 
@@ -51,7 +50,7 @@
     return self;
 }
 
-
+#pragma mark - Networking Methods
 -(void)loadArticlesWithSearchTerm:(NSString *)searchTerm
                     andParameters:(NSDictionary *)searchParameters
                           results:(void (^)(NSArray *, BOOL, NSError *))completionBlock
@@ -77,20 +76,7 @@
                                       parameters:[finalParameters copy]
                                          success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                              
-                                             NSDictionary *responseDict = responseObject;
-                                             NSDictionary *response2 = responseDict[@"response"];
-                                             NSArray *resultsArray = (NSArray *)response2[@"results"];
-                                             NSMutableArray *cleanArticleArrayWorking = [[NSMutableArray alloc] initWithCapacity:resultsArray.count];
-                                             
-                                             // clean up the array and put in clean, properly formatted Article objects
-                                             
-                                             for (NSDictionary *articleObj in resultsArray)
-                                             {
-                                                 Article *article = [[Article alloc] initWithDictionary:articleObj];
-                                                 [cleanArticleArrayWorking addObject:article];
-                                             }
-                                             
-                                             NSArray *finalArray = [NSArray arrayWithArray:cleanArticleArrayWorking];
+                                             NSArray *finalArray = [self articlesFromJSONResponseObject:responseObject];
                                              
                                              if (completionBlock)
                                              {
@@ -105,7 +91,25 @@
                                              }
                                              
                                          }];
+}
 
+#pragma mark - Model Builder Methods
+-(NSArray *)articlesFromJSONResponseObject:(id)responseObject
+{
+    NSDictionary *responseObjectDictionary = responseObject;
+    NSDictionary *responseDictionary = responseObjectDictionary[@"response"];
+    NSArray *resultsArray = (NSArray *)responseDictionary[@"results"];
+    NSMutableArray *cleanArticleArrayWorking = [[NSMutableArray alloc] initWithCapacity:resultsArray.count];
+    
+    // clean up the array and put in clean, properly formatted Article objects
+    
+    for (NSDictionary *articleObj in resultsArray)
+    {
+        Article *article = [[Article alloc] initWithDictionary:articleObj];
+        [cleanArticleArrayWorking addObject:article];
+    }
+    
+    return  [NSArray arrayWithArray:cleanArticleArrayWorking];
 }
 
 @end

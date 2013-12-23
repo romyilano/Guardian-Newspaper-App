@@ -97,6 +97,11 @@
     }
 }
 
+#pragma mark - Custom Methods
+-(void)reorderArticles
+{
+    // to-do - reorder articles by date
+}
 
 
 @end
