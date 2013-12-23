@@ -1,15 +1,7 @@
 # GUARDIAN NEWSPAPER NETWORKING SAMPLE
 
-## This Branch
-Doesn't use AFNetworking
-Making a switch AFNetworking on the master branch
-
 ## About
-This is a quick and dirty
-
-Using Mashery's API to make a quick and simple
-guardian newspaper networking sample
-
+This is a quick and dirty iPhone networking app using Mashery's Guardian Newspaper  API
 
 Note: the API key is gitignored, so you have to go get your own
 if you want to run this on your phone or the simulator
