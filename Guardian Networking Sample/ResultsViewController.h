@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ResultsViewController : UITableViewController
-
+@property (strong, nonatomic) NSArray *passedArticles;
+@property (strong, nonatomic) NSString *searchTerm;
 @end

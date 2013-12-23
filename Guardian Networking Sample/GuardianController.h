@@ -11,5 +11,6 @@
 @interface GuardianController : NSObject
 + (id)sharedController;
 
--(void)loadArticlesWithSearchTerm:(NSString *)searchTerm results:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
+-(void)loadArticlesWithSearchTerm:(NSString *)searchTerm
+                          results:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
 @end

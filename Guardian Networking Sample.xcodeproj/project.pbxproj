@@ -22,6 +22,7 @@
 		1C26621418550871001F982E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C26621318550871001F982E /* QuartzCore.framework */; };
 		1C2662161855087B001F982E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2662151855087B001F982E /* CoreData.framework */; };
 		1C26621818550884001F982E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C26621718550884001F982E /* CoreText.framework */; };
+		1C64F12F1867D26A00DD75A2 /* ResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C64F12E1867D26A00DD75A2 /* ResultCell.m */; };
 		1C65312818568BC100CB81BC /* GuardianManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65312718568BC100CB81BC /* GuardianManager.m */; };
 		1C65312B18568BC900CB81BC /* GuardianCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65312A18568BC900CB81BC /* GuardianCommunicator.m */; };
 		1CA5E05618522FA300A9FB8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05518522FA300A9FB8C /* Foundation.framework */; };
@@ -94,6 +95,8 @@
 		1C26621318550871001F982E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1C2662151855087B001F982E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1C26621718550884001F982E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		1C64F12D1867D26A00DD75A2 /* ResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultCell.h; sourceTree = "<group>"; };
+		1C64F12E1867D26A00DD75A2 /* ResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultCell.m; sourceTree = "<group>"; };
 		1C65312618568BC100CB81BC /* GuardianManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianManager.h; sourceTree = "<group>"; };
 		1C65312718568BC100CB81BC /* GuardianManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardianManager.m; sourceTree = "<group>"; };
 		1C65312918568BC900CB81BC /* GuardianCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianCommunicator.h; sourceTree = "<group>"; };
@@ -370,8 +373,6 @@
 			children = (
 				1CA5E0C118526F7100A9FB8C /* SearchViewController.h */,
 				1CA5E0C218526F7100A9FB8C /* SearchViewController.m */,
-				1C26620F18550814001F982E /* ResultsViewController.h */,
-				1C26621018550814001F982E /* ResultsViewController.m */,
 			);
 			name = "= User Search";
 			sourceTree = "<group>";
@@ -390,6 +391,10 @@
 			children = (
 				1CFDEB1C1867B27600BD3041 /* BasicSearchViewController.h */,
 				1CFDEB1D1867B27600BD3041 /* BasicSearchViewController.m */,
+				1C26620F18550814001F982E /* ResultsViewController.h */,
+				1C26621018550814001F982E /* ResultsViewController.m */,
+				1C64F12D1867D26A00DD75A2 /* ResultCell.h */,
+				1C64F12E1867D26A00DD75A2 /* ResultCell.m */,
 			);
 			name = "= Basic Search";
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 				1CFBEB701865EE9B00B51A16 /* GuardianAFHTTPClient.m in Sources */,
 				1CA5E06618522FA300A9FB8C /* AppDelegate.m in Sources */,
 				1CFDEB1E1867B27600BD3041 /* BasicSearchViewController.m in Sources */,
+				1C64F12F1867D26A00DD75A2 /* ResultCell.m in Sources */,
 				1CA5E06218522FA300A9FB8C /* main.m in Sources */,
 				1CA5E0901852382300A9FB8C /* GuardianAPIHelper.m in Sources */,
 			);

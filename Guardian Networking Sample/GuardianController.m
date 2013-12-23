@@ -44,7 +44,6 @@
    // NSString *baseURLString = guardianBaseURL;
     NSString *searchPath = @"search";
     
-    // http://content.guardianapis.com/search?q=snowboard&show-tags=all&date-id=date%2Flast7days&api-key=5x23fnrsr4hr23zhe58aawjf
     NSDictionary *parameters = @{ @"q" : searchTerm,
                                   @"show-tags" : @"all",
                                   @"date-id" : @"date%2Flast7days",
@@ -57,17 +56,33 @@
                                       parameters:parameters
                                          success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                              
-                                             NSLog(@"response obj: %@", responseObject);
+                                             // NSLog(@"response obj: %@", responseObject);
                                              
-                                             NSArray *rawArticleArray = [NSJSONSerialization JSONObjectWithData:responseObject
-                                                                                                        options:kNilOptions
-                                                                                                                 error:nil];
                                              
-                                             NSLog(@"what does the response look like? %@", rawArticleArray);
+                                             // Lesson learned - afnetworking has already made this a dictionary
+                                             // no need to use NSJSONSerialization
+                                             // to-do - make this more clean
+                                           
+//                                             NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseObject
+//                                                                                                          options:kNilOptions
+//                                                                                                            error:nil];
+//                                             
+//                                             NSDictionary *responseKey = [NSJSONSerialization JSONObjectWithData:responseDict[@"response"]
+//                                                                                                         options:kNilOptions
+//                                                                                                           error:nil];
+//                                             
+                                             NSDictionary *responseDict = responseObject;
+                                             
+                                             NSDictionary *response2 = responseDict[@"response"];
+                                             
+                                             
+                                            NSArray *resultsArray = (NSArray *)response2[@"results"];
+                                            
+                                             
                                              
                                              if (completionBlock)
                                              {
-                                                 completionBlock((NSArray *)responseObject, YES, nil);
+                                                 completionBlock(resultsArray, YES, nil);
                                              }
                                              
                                          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
