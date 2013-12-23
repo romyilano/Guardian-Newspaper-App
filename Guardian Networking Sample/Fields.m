@@ -9,6 +9,21 @@
 #import "Fields.h"
 
 @implementation Fields
+
++(Fields *)fieldFromJSONDict:(NSDictionary *)jsonDict
+{
+    return [self initWithHeadline:JSONDictionary[@"headline"]
+                        trailText:JSONDictionary[@"trailText"]
+                       standFirst:JSONDictionary[@"standFirst"]
+                 shortURLAsString:JSONDictionary[@"shortUrl"]
+             thumbnailURLAsString:JSONDictionary[@"thumbnail"]
+         lastModifiedDateAsString:JSONDictionary[@"lastModified"]
+                wordCountAsString:JSONDictionary[@"wordcount"]
+     newspaperEditionDateAsString:JSONDictionary[@"newspaperEditionDate"]
+      newspaperPageNumberAsString:JSONDictionary[@"newspaperPageNumber"]
+              commentableAsString:JSONDictionary[@"commentable"]];
+}
+
 -(id)initWithHeadline:(NSString *)headline
             trailText:(NSString *)trailText
            standFirst:(NSString *)standfirst
@@ -38,21 +53,24 @@ newspaperPageNumberAsString:(NSString *)newspaperPageNumberAsString
     return self;
 }
 
+-(id)initWithJSONDictionary:(NSDictionary *)JSONDictionary
+{
+    return [self initWithHeadline:JSONDictionary[@"headline"]
+                        trailText:JSONDictionary[@"trailText"]
+                       standFirst:JSONDictionary[@"standFirst"]
+                 shortURLAsString:JSONDictionary[@"shortUrl"]
+             thumbnailURLAsString:JSONDictionary[@"thumbnail"]
+         lastModifiedDateAsString:JSONDictionary[@"lastModified"]
+                wordCountAsString:JSONDictionary[@"wordcount"]
+     newspaperEditionDateAsString:JSONDictionary[@"newspaperEditionDate"]
+      newspaperPageNumberAsString:JSONDictionary[@"newspaperPageNumber"]
+              commentableAsString:JSONDictionary[@"commentable"]];
+}
+
 #pragma mark - Setters & Getters
 -(NSURL *)thumbnailURL
 {
-    if (!_thumbnailURL)
-    {
-        if (_thumbnailURLAsString)
-        {
-            _thumbnailURL = [NSURL URLWithString:_thumbnailURLAsString];
-        } else
-        {
-            return nil;
-        }
-    }
-    
-    return _thumbnailURL;
+   return [NSURL URLWithString:_thumbnailURLAsString];
 }
 
 -(NSURL *)shortURL
@@ -90,7 +108,7 @@ newspaperPageNumberAsString:(NSString *)newspaperPageNumberAsString
             }
             else
             {
-                return nil;
+                return NO;
             }
         }
     }

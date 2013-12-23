@@ -17,6 +17,7 @@
         webURLAsString:(NSString *)webURLAsString
         apiURLAsString:(NSString *)apiURLasString
         webPublicationDateAsString:(NSString *)webPublicationDateAsString
+                 fieldDictionary:(NSDictionary *)fieldDict
 {
     if (self = [super init])
     {
@@ -26,6 +27,10 @@
         _webURLAsString = webURLAsString;
         _apiURLAsString = apiURLasString;
         _webPublicationDateAsString = webPublicationDateAsString;
+        _fieldDictionary = fieldDict;
+        
+        // this should be a getter to-do
+        _fields = [[Fields alloc] initWithJSONDictionary:_fieldDictionary];
     }
     return self;
 }
@@ -38,7 +43,8 @@
                           webTitle:dictionaryJSON[@"webTitle"]
                     webURLAsString:dictionaryJSON[@"webUrl"]
                     apiURLAsString:dictionaryJSON[@"apiUrl"]
-        webPublicationDateAsString:dictionaryJSON[@"webPublicationDate"]];
+        webPublicationDateAsString:dictionaryJSON[@"webPublicationDate"]
+            fieldDictionary:dictionaryJSON[@"fields"]];
     
 }
 
@@ -99,14 +105,6 @@
     return _apiURL;
 }
 
--(Fields *)fields
-{
-    if (_fields)
-    {
-        //
-        
-    }
-    return _fields;
-}
+
 
 @end

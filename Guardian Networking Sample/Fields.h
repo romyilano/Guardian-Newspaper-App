@@ -44,4 +44,9 @@ newspaperEditionDateAsString:(NSString *)newspaperEditionDateAsString
 newspaperPageNumberAsString:(NSString *)newspaperPageNumberAsString
   commentableAsString:(NSString *)commentableAsString;
 
+-(id)initWithJSONDictionary:(NSDictionary*)JSONDictionary;
+
++(Fields *)fieldFromJSONDict:(NSDictionary *)jsonDict;
+
+
 @end

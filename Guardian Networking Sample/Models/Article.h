@@ -19,6 +19,7 @@
 @property (strong ,nonatomic) NSString *webURLAsString;
 @property (strong, nonatomic) NSString *webPublicationDateAsString;
 @property (strong,nonatomic) NSString *apiURLAsString; // this goes to a json of the article dict
+@property (strong, nonatomic) NSDictionary *fieldDictionary;    // processed into Field obj in getter
 
 // use accessors
 @property (strong, nonatomic) NSDate *webPublicationDate;
@@ -34,7 +35,8 @@
               webTitle:(NSString *)webTitle
         webURLAsString:(NSString *)webURLAsString
         apiURLAsString:(NSString *)apiURLasString
-webPublicationDateAsString:(NSString *)webPublicationDateAsString;
+webPublicationDateAsString:(NSString *)webPublicationDateAsString
+       fieldDictionary:(NSDictionary *)fieldDictionary;
 
 -(id)initWithDictionary:(NSDictionary *)dictionaryJSON;
 

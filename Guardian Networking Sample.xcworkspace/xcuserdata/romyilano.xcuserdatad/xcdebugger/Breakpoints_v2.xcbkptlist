@@ -23,52 +23,6 @@
             timestampString = "409469435.460265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "-formatDate"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ArticleViewController formatDate]"
-                  moduleName = "Guardian Networking Sample"
-                  urlString = "file:///Users/romyilano/Developer/Projects/RomySamples/Guardian%20Networking%20Sample/Guardian%20Networking%20Sample/ArticleViewController.m"
-                  timestampString = "409481853.859561"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "226">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ArticleViewController formatDate]"
-                  moduleName = "Guardian Networking Sample"
-                  urlString = "file:///Users/romyilano/Developer/Projects/RomySamples/Guardian%20Networking%20Sample/Guardian%20Networking%20Sample/ArticleViewController.m"
-                  timestampString = "409481853.859894"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "242">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Guardian Networking Sample/ArticleViewController.m"
-            timestampString = "409469435.460265"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
             endingLineNumber = "45"
             landmarkName = "-viewWillAppear:"
@@ -82,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Guardian Networking Sample/Models/Article.m"
-            timestampString = "409481852.364538"
+            timestampString = "409509262.569816"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "-webPublicanDateAsStringForPresentation"
             landmarkType = "5">
          </BreakpointContent>
