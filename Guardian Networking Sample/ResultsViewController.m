@@ -10,6 +10,8 @@
 #import "GuardianController.h"
 #import "ResultCell.h"
 
+#import "Article.h"
+
 @interface ResultsViewController ()
 
 @end
@@ -71,8 +73,8 @@
     ResultCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    NSDictionary *articleObj = self.passedArticles[indexPath.row];
-    cell.articleTitleLabel.text = articleObj[@"webTitle"];
+    Article *article = self.passedArticles[indexPath.row];
+    cell.articleTitleLabel.text = article.webTitle;
     
     return cell;
 }

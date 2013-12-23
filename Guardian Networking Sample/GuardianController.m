@@ -11,6 +11,8 @@
 
 #import "GuardianAFHTTPClient.h"
 
+#import "Article.h"
+
 #import "Constants.h"
 #import "GuardianAPIHelper.h"
 
@@ -55,34 +57,24 @@
     [[GuardianAFHTTPClient sharedClient] getPath:searchPath
                                       parameters:parameters
                                          success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                             
-                                             // NSLog(@"response obj: %@", responseObject);
-                                             
-                                             
-                                             // Lesson learned - afnetworking has already made this a dictionary
-                                             // no need to use NSJSONSerialization
-                                             // to-do - make this more clean
-                                           
-//                                             NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseObject
-//                                                                                                          options:kNilOptions
-//                                                                                                            error:nil];
-//                                             
-//                                             NSDictionary *responseKey = [NSJSONSerialization JSONObjectWithData:responseDict[@"response"]
-//                                                                                                         options:kNilOptions
-//                                                                                                           error:nil];
-//                                             
-                                             NSDictionary *responseDict = responseObject;
-                                             
-                                             NSDictionary *response2 = responseDict[@"response"];
-                                             
-                                             
-                                            NSArray *resultsArray = (NSArray *)response2[@"results"];
                                             
+                                             NSDictionary *responseDict = responseObject;
+                                             NSDictionary *response2 = responseDict[@"response"];
+                                             NSArray *resultsArray = (NSArray *)response2[@"results"];
+                                             NSMutableArray *cleanArticleArrayWorking = [[NSMutableArray alloc] initWithCapacity:resultsArray.count];
                                              
+                                             // clean up the array and put in clean, properly formatted Article objects
+                                             for (NSDictionary *articleObj in resultsArray)
+                                             {
+                                                 Article *article = [[Article alloc] initWithDictionary:articleObj];
+                                                 [cleanArticleArrayWorking addObject:article];
+                                             }
+                                             
+                                             NSArray *finalArray = [NSArray arrayWithArray:cleanArticleArrayWorking];
                                              
                                              if (completionBlock)
                                              {
-                                                 completionBlock(resultsArray, YES, nil);
+                                                 completionBlock(finalArray, YES, nil);
                                              }
                                              
                                          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
