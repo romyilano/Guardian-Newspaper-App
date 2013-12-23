@@ -10,6 +10,7 @@
 #import "GuardianController.h"
 #import "ResultsViewController.h"
 
+
 @interface BasicSearchViewController ()
 {
     GuardianController *_guardianController;
@@ -65,23 +66,27 @@
     
     [self.textField resignFirstResponder];
     
+    NSDictionary *parameters =  @{ @"show-tags" : @"all",
+                                   @"date-id" : @"date%2Flast7days",
+                                   @"api-key" : kGuardianKey };
+    
     [_guardianController loadArticlesWithSearchTerm:self.textField.text
+                                      andParameters:parameters
                                             results:^(NSArray *results, BOOL success, NSError *error) {
-                                                
                                                 if (!error && results.count > 0)
                                                 {
                                                     self.articles = results;
                                                     [self performSegueWithIdentifier:@"SearchSegue" sender:self];
                                                 }
-                                                 else
-                                                 {
-                                                     NSLog(@"Fail! because %@", error);
-                                                     
-                                                     [[[UIAlertView alloc] initWithTitle:@"Sorry"
+                                                else
+                                                {
+                                                    NSLog(@"Fail! because %@", error);
+                                                    
+                                                    [[[UIAlertView alloc] initWithTitle:@"Sorry"
                                                                                 message:@"No search results found"
                                                                                delegate:self
-                                                                       cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-                                                 }
+                                                                      cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+                                                }
                                             }];
     
 }

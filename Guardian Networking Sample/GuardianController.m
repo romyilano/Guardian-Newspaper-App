@@ -13,11 +13,18 @@
 
 #import "Article.h"
 
-#import "Constants.h"
 #import "GuardianAPIHelper.h"
+
+@interface GuardianController ()
+
+@property (strong, nonatomic) NSDictionary *defaultParameters;
+
+@end
 
 
 @implementation GuardianController
+
+
 + (id)sharedController
 {
     static dispatch_once_t onceToken;
@@ -37,34 +44,46 @@
     if (!self) return nil;
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
+    self.defaultParameters =  @{     @"show-tags" : @"all",
+                                     @"date-id" : @"date%2Flast7days",
+                                     @"api-key" : kGuardianKey };
+    
     return self;
 }
 
--(void)loadArticlesWithSearchTerm:(NSString *)searchTerm results:(void (^)(NSArray *, BOOL, NSError *))completionBlock
+
+-(void)loadArticlesWithSearchTerm:(NSString *)searchTerm
+                    andParameters:(NSDictionary *)searchParameters
+                          results:(void (^)(NSArray *, BOOL, NSError *))completionBlock
 {
-    
-   // NSString *baseURLString = guardianBaseURL;
     NSString *searchPath = @"search";
+
+    NSMutableDictionary *finalParameters = [[NSMutableDictionary alloc] init];
     
-    NSDictionary *parameters = @{ @"q" : searchTerm,
-                                  @"show-tags" : @"all",
-                                  @"date-id" : @"date%2Flast7days",
-                                  @"api-key" : kGuardianKey };
+    if (searchParameters == nil)
+    {
+        finalParameters = [self.defaultParameters copy];
+        
+    } else
+    {
+        [finalParameters setObject:searchTerm forKey:@"q"];
+        [finalParameters addEntriesFromDictionary:searchParameters];
+    }
     
     [[GuardianAFHTTPClient sharedClient] registerHTTPOperationClass:[AFJSONRequestOperation class]];
     [[GuardianAFHTTPClient sharedClient] setDefaultHeader:@"Accept" value:@"application/json"];
     
     [[GuardianAFHTTPClient sharedClient] getPath:searchPath
-                                      parameters:parameters
+                                      parameters:[finalParameters copy]
                                          success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                            
+                                             
                                              NSDictionary *responseDict = responseObject;
                                              NSDictionary *response2 = responseDict[@"response"];
                                              NSArray *resultsArray = (NSArray *)response2[@"results"];
                                              NSMutableArray *cleanArticleArrayWorking = [[NSMutableArray alloc] initWithCapacity:resultsArray.count];
                                              
                                              // clean up the array and put in clean, properly formatted Article objects
-
+                                             
                                              for (NSDictionary *articleObj in resultsArray)
                                              {
                                                  Article *article = [[Article alloc] initWithDictionary:articleObj];
@@ -86,8 +105,7 @@
                                              }
                                              
                                          }];
-    
-    
+
 }
 
 @end

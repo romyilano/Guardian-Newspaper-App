@@ -12,5 +12,6 @@
 + (id)sharedController;
 
 -(void)loadArticlesWithSearchTerm:(NSString *)searchTerm
+                    andParameters:(NSDictionary *)searchParameters
                           results:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
 @end
