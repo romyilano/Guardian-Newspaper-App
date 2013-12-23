@@ -18,6 +18,7 @@
 
 @property (strong, nonatomic) NSString *trailText;
 @property (strong, nonatomic) NSString *headline;
+
 @property (strong, nonatomic) NSString *standfirst;
 
 @property (strong, nonatomic) NSString *newspaperEditionDateAsString;   // newspaperEditionDate

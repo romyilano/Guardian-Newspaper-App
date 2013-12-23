@@ -10,4 +10,5 @@
 
 @interface ResultCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *articleTitleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *articleImage;
 @end

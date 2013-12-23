@@ -177,15 +177,20 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guardian Article" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RvX-cO-HDW">
-                                            <rect key="frame" x="14" y="12" width="291" height="61"/>
+                                            <rect key="frame" x="95" y="12" width="210" height="61"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="031-Dz-Ma8">
+                                            <rect key="frame" x="11" y="12" width="76" height="61"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="articleImage" destination="031-Dz-Ma8" id="rUL-cP-H3a"/>
                                     <outlet property="articleTitleLabel" destination="RvX-cO-HDW" id="Wlv-WV-g3N"/>
                                     <segue destination="mY3-8N-Qzt" kind="push" identifier="ArticleSegue" id="R4j-bJ-ULh"/>
                                 </connections>
