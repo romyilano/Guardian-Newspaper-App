@@ -55,16 +55,16 @@
     
     hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"Loading Article";
-    [hud showWhileExecuting:@selector(waitForTwoSeconds:)
+    [hud showWhileExecuting:@selector(waitForOneSecond:)
                    onTarget:self
                  withObject:nil animated:YES];
     
 }
 
 
--(void)waitForTwoSeconds:(id)sender
+-(void)waitForOneSecond:(id)sender
 {
-    sleep(2);
+    sleep(1);
 }
 
 - (void)didReceiveMemoryWarning
