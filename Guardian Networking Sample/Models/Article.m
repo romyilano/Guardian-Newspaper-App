@@ -7,6 +7,7 @@
 //
 
 #import "Article.h"
+#import "Fields.h"
 
 @implementation Article
 

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class Fields;
 @interface Article : NSObject
 // note some people like to set property to copy on mutable obj like NSString, NSDictionary etc.
 
@@ -25,6 +26,8 @@
 @property (strong, nonatomic) NSURL *webURL;
 @property (strong, nonatomic) NSURL *apiURL;
 
+// to-do
+@property (strong, nonatomic) Fields *fields;
 
 -(id)initWithArticleID:(NSString *)articleID
              sectionID:(NSString *)sectionID
