@@ -8,8 +8,12 @@
 
 #import "ArticleViewController.h"
 
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface ArticleViewController ()
+{
+    MBProgressHUD *hud;
+}
 
 @end
 
@@ -45,6 +49,24 @@
     
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    
+    hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Loading Article";
+    [hud showWhileExecuting:@selector(waitForTwoSeconds:)
+                   onTarget:self
+                 withObject:nil animated:YES];
+    
+}
+
+
+-(void)waitForTwoSeconds:(id)sender
+{
+    sleep(2);
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -62,14 +84,27 @@
 }
 */
 
--(void)formatDate
+#pragma mark - UIWebViewDelegate Methods
+
+
+-(void)webViewDidStartLoad:(UIWebView *)webView
 {
-    NSLog(@"Date as string: %@", self.article.webPublicationDateAsString);
-    
-    NSDateFormatter*dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"];
+
 }
 
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    
+    [[[UIAlertView alloc] initWithTitle:@"Sorry"
+                                message:@"Couldn't load the article"
+                               delegate:self
+                      cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+}
 
 
 

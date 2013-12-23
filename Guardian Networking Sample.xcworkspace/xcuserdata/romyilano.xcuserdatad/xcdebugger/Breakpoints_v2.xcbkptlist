@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Guardian Networking Sample/ArticleViewController.m"
-            timestampString = "409469435.460265"
+            timestampString = "409522749.256039"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
