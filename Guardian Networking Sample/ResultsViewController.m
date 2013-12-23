@@ -13,6 +13,9 @@
 #import "ResultCell.h"
 
 #import "Article.h"
+#import "Fields.h"
+
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ResultsViewController ()
 -(void)reorderArticles;
@@ -75,6 +78,10 @@
     // Configure the cell...
     Article *article = self.passedArticles[indexPath.row];
     cell.articleTitleLabel.text = article.webTitle;
+    
+    [cell.articleImage setImageWithURL:article.fields.thumbnailURL
+                      placeholderImage:[UIImage imageNamed:@"placeholder"]
+                               options:SDWebImageRefreshCached];
     
     return cell;
 }

@@ -22,6 +22,8 @@
 		1C26621418550871001F982E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C26621318550871001F982E /* QuartzCore.framework */; };
 		1C2662161855087B001F982E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2662151855087B001F982E /* CoreData.framework */; };
 		1C26621818550884001F982E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C26621718550884001F982E /* CoreText.framework */; };
+		1C398DB01868C91E00B0D49B /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C398DAE1868C91E00B0D49B /* placeholder.png */; };
+		1C398DB11868C91E00B0D49B /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C398DAF1868C91E00B0D49B /* placeholder@2x.png */; };
 		1C64F12F1867D26A00DD75A2 /* ResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C64F12E1867D26A00DD75A2 /* ResultCell.m */; };
 		1CA5E05618522FA300A9FB8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05518522FA300A9FB8C /* Foundation.framework */; };
 		1CA5E05818522FA300A9FB8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05718522FA300A9FB8C /* CoreGraphics.framework */; };
@@ -86,6 +88,8 @@
 		1C26621318550871001F982E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1C2662151855087B001F982E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1C26621718550884001F982E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		1C398DAE1868C91E00B0D49B /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		1C398DAF1868C91E00B0D49B /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
 		1C64F12D1867D26A00DD75A2 /* ResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultCell.h; sourceTree = "<group>"; };
 		1C64F12E1867D26A00DD75A2 /* ResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultCell.m; sourceTree = "<group>"; };
 		1CA5E05218522FA300A9FB8C /* Guardian Networking Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guardian Networking Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +200,15 @@
 			name = "= AppLogic + Networking";
 			sourceTree = "<group>";
 		};
+		1C398DB21868C92200B0D49B /* Placeholder Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				1C398DAE1868C91E00B0D49B /* placeholder.png */,
+				1C398DAF1868C91E00B0D49B /* placeholder@2x.png */,
+			);
+			name = "Placeholder Graphics";
+			sourceTree = "<group>";
+		};
 		1CA5E04918522FA300A9FB8C = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +291,7 @@
 		1CA5E09E1852499200A9FB8C /* = Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				1C398DB21868C92200B0D49B /* Placeholder Graphics */,
 				1C2661F718550437001F982E /* = Icons */,
 				1CA5E06D18522FA300A9FB8C /* Images.xcassets */,
 				1C2661F818550451001F982E /* = Fancy TableView Graphics */,
@@ -430,6 +444,8 @@
 				1CA5E09A1852489200A9FB8C /* iphone-spotlight@2x.png in Resources */,
 				1CA5E0931852481F00A9FB8C /* README.md in Resources */,
 				1CA5E0981852489200A9FB8C /* iphoneApp-ios7@2x.png in Resources */,
+				1C398DB11868C91E00B0D49B /* placeholder@2x.png in Resources */,
+				1C398DB01868C91E00B0D49B /* placeholder.png in Resources */,
 				1C26620418550463001F982E /* button_back.png in Resources */,
 				1C26620618550463001F982E /* cell_bottom.png in Resources */,
 				1C26620E18550463001F982E /* common_bg@2x.png in Resources */,
