@@ -15,10 +15,7 @@
 #import "Article.h"
 
 @interface ResultsViewController ()
--(void)reorderArticles
-{
-    
-}
+-(void)reorderArticles;
 @end
 
 @implementation ResultsViewController

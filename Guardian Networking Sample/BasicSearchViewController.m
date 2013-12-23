@@ -10,8 +10,7 @@
 #import "GuardianController.h"
 #import "ResultsViewController.h"
 
-
-
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface BasicSearchViewController ()
 {
@@ -66,6 +65,9 @@
 #pragma mark - Action Methods
 - (IBAction)searchBtnPressed:(UIButton *)sender {
     
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Searching";
+    
     [self.textField resignFirstResponder];
     
     NSDictionary *parameters =  @{ @"show-tags" : @"all",
@@ -78,11 +80,19 @@
                                             results:^(NSArray *results, BOOL success, NSError *error) {
                                                 if (!error && results.count > 0)
                                                 {
+                                                    
+                                                    
+                                                    
+                                                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                    
                                                     self.articles = results;
                                                     [self performSegueWithIdentifier:@"SearchSegue" sender:self];
                                                 }
                                                 else
                                                 {
+                                                    
+                                                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                    
                                                     NSLog(@"Fail! because %@", error);
                                                     
                                                     [[[UIAlertView alloc] initWithTitle:@"Sorry"

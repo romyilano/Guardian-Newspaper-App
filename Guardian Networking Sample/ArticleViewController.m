@@ -43,8 +43,6 @@
     
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.article.webURL]];
     
-   
-    
 }
 
 - (void)didReceiveMemoryWarning
