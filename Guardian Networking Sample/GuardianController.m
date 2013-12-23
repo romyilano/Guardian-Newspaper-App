@@ -64,6 +64,7 @@
                                              NSMutableArray *cleanArticleArrayWorking = [[NSMutableArray alloc] initWithCapacity:resultsArray.count];
                                              
                                              // clean up the array and put in clean, properly formatted Article objects
+
                                              for (NSDictionary *articleObj in resultsArray)
                                              {
                                                  Article *article = [[Article alloc] initWithDictionary:articleObj];
