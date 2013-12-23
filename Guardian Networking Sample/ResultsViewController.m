@@ -15,7 +15,10 @@
 #import "Article.h"
 
 @interface ResultsViewController ()
-
+-(void)reorderArticles
+{
+    
+}
 @end
 
 @implementation ResultsViewController
@@ -54,8 +57,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 #pragma mark - Table view data source
 

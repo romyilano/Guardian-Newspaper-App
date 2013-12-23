@@ -43,6 +43,8 @@
     
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.article.webURL]];
     
+   
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,5 +63,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)formatDate
+{
+    NSLog(@"Date as string: %@", self.article.webPublicationDateAsString);
+    
+    NSDateFormatter*dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"];
+    
+    
+    
+    
+}
 
 @end

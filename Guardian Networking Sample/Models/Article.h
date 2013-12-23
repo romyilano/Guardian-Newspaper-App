@@ -15,13 +15,13 @@
 @property (strong, nonatomic) NSString *sectionId;
 @property (strong ,nonatomic) NSString *webTitle;
 
-// to be worked on
 @property (strong ,nonatomic) NSString *webURLAsString;
 @property (strong, nonatomic) NSString *webPublicationDateAsString;
 @property (strong,nonatomic) NSString *apiURLAsString; // this goes to a json of the article dict
 
-// initialized
+// use accessors
 @property (strong, nonatomic) NSDate *webPublicationDate;
+@property (strong, nonatomic) NSString *webPublicanDateAsStringForPresentation;
 @property (strong, nonatomic) NSURL *webURL;
 @property (strong, nonatomic) NSURL *apiURL;
 

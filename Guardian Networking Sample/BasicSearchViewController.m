@@ -11,6 +11,8 @@
 #import "ResultsViewController.h"
 
 
+
+
 @interface BasicSearchViewController ()
 {
     GuardianController *_guardianController;
@@ -68,6 +70,7 @@
     
     NSDictionary *parameters =  @{ @"show-tags" : @"all",
                                    @"date-id" : @"date%2Flast7days",
+                                   @"show-fields" : @"all",
                                    @"api-key" : kGuardianKey };
     
     [_guardianController loadArticlesWithSearchTerm:self.textField.text
