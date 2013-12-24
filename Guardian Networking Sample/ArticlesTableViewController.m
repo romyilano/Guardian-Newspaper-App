@@ -8,6 +8,7 @@
 
 #import "ArticlesTableViewController.h"
 #import "GuardianController.h"
+#import "ArticleViewController.h"
 #import "ResultCell.h"
 
 #import <MBProgressHUD/MBProgressHUD.h>
@@ -62,7 +63,17 @@
         {
             self.articles = results;
             
-            [self.tableView reloadData];
+            if (self.articles.count > 0)
+            {
+               [self.tableView reloadData];
+            } else
+            {
+                [[[UIAlertView alloc] initWithTitle:@"Sorry"
+                                            message:@"No articles found for this section"
+                                           delegate:self
+                                  cancelButtonTitle:nil
+                                  otherButtonTitles:@"OK", nil] show];
+            }
         }
         else
         {
@@ -144,8 +155,13 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"SectionIndividualArticleSegue"])
+    {
+        NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+        Article *selectedArticle = self.articles[selectedIndexPath.row];
+        ArticleViewController *articleViewController = segue.destinationViewController;
+        articleViewController.article = selectedArticle;
+    }
 }
 
 
