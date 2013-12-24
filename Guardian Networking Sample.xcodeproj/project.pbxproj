@@ -24,6 +24,8 @@
 		1C26621818550884001F982E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C26621718550884001F982E /* CoreText.framework */; };
 		1C398DB01868C91E00B0D49B /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C398DAE1868C91E00B0D49B /* placeholder.png */; };
 		1C398DB11868C91E00B0D49B /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C398DAF1868C91E00B0D49B /* placeholder@2x.png */; };
+		1C398DBE1868DA1600B0D49B /* SearchChoicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C398DBD1868DA1600B0D49B /* SearchChoicesViewController.m */; };
+		1C400A9E1869FB1800891D36 /* Sections.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C400A9D1869FB1800891D36 /* Sections.json */; };
 		1C64F12F1867D26A00DD75A2 /* ResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C64F12E1867D26A00DD75A2 /* ResultCell.m */; };
 		1CA5E05618522FA300A9FB8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05518522FA300A9FB8C /* Foundation.framework */; };
 		1CA5E05818522FA300A9FB8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05718522FA300A9FB8C /* CoreGraphics.framework */; };
@@ -90,6 +92,9 @@
 		1C26621718550884001F982E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		1C398DAE1868C91E00B0D49B /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		1C398DAF1868C91E00B0D49B /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
+		1C398DBC1868DA1600B0D49B /* SearchChoicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchChoicesViewController.h; sourceTree = "<group>"; };
+		1C398DBD1868DA1600B0D49B /* SearchChoicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchChoicesViewController.m; sourceTree = "<group>"; };
+		1C400A9D1869FB1800891D36 /* Sections.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sections.json; sourceTree = "<group>"; };
 		1C64F12D1867D26A00DD75A2 /* ResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultCell.h; sourceTree = "<group>"; };
 		1C64F12E1867D26A00DD75A2 /* ResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultCell.m; sourceTree = "<group>"; };
 		1CA5E05218522FA300A9FB8C /* Guardian Networking Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guardian Networking Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +214,52 @@
 			name = "Placeholder Graphics";
 			sourceTree = "<group>";
 		};
+		1C398DB31868D57B00B0D49B /* = Results VCs + More */ = {
+			isa = PBXGroup;
+			children = (
+				1C398DB51868D59800B0D49B /* ArticleViewController */,
+				1C398DB71868D5AC00B0D49B /* ResultCell */,
+				1C398DB61868D5A600B0D49B /* ResultsViewController */,
+			);
+			name = "= Results VCs + More";
+			sourceTree = "<group>";
+		};
+		1C398DB41868D58F00B0D49B /* BasicSearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1CFDEB1C1867B27600BD3041 /* BasicSearchViewController.h */,
+				1CFDEB1D1867B27600BD3041 /* BasicSearchViewController.m */,
+			);
+			name = BasicSearchViewController;
+			sourceTree = "<group>";
+		};
+		1C398DB51868D59800B0D49B /* ArticleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1CA6595A1867D850008C669B /* ArticleViewController.h */,
+				1CA6595B1867D851008C669B /* ArticleViewController.m */,
+			);
+			name = ArticleViewController;
+			sourceTree = "<group>";
+		};
+		1C398DB61868D5A600B0D49B /* ResultsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C26620F18550814001F982E /* ResultsViewController.h */,
+				1C26621018550814001F982E /* ResultsViewController.m */,
+			);
+			name = ResultsViewController;
+			sourceTree = "<group>";
+		};
+		1C398DB71868D5AC00B0D49B /* ResultCell */ = {
+			isa = PBXGroup;
+			children = (
+				1C64F12D1867D26A00DD75A2 /* ResultCell.h */,
+				1C64F12E1867D26A00DD75A2 /* ResultCell.m */,
+			);
+			name = ResultCell;
+			sourceTree = "<group>";
+		};
 		1CA5E04918522FA300A9FB8C = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +317,7 @@
 				1CA5E05E18522FA300A9FB8C /* InfoPlist.strings */,
 				1CA5E06118522FA300A9FB8C /* main.m */,
 				1CA5E06318522FA300A9FB8C /* Guardian Networking Sample-Prefix.pch */,
+				1C400A9D1869FB1800891D36 /* Sections.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -303,7 +355,10 @@
 			isa = PBXGroup;
 			children = (
 				1CA5E06718522FA300A9FB8C /* Main.storyboard */,
-				1CFDEB201867B30F00BD3041 /* = Basic Search */,
+				1C398DBC1868DA1600B0D49B /* SearchChoicesViewController.h */,
+				1C398DBD1868DA1600B0D49B /* SearchChoicesViewController.m */,
+				1C398DB41868D58F00B0D49B /* BasicSearchViewController */,
+				1C398DB31868D57B00B0D49B /* = Results VCs + More */,
 			);
 			name = "= GUI";
 			sourceTree = "<group>";
@@ -339,21 +394,6 @@
 				1CA5E06518522FA300A9FB8C /* AppDelegate.m */,
 			);
 			name = AppDelegate;
-			sourceTree = "<group>";
-		};
-		1CFDEB201867B30F00BD3041 /* = Basic Search */ = {
-			isa = PBXGroup;
-			children = (
-				1CFDEB1C1867B27600BD3041 /* BasicSearchViewController.h */,
-				1CFDEB1D1867B27600BD3041 /* BasicSearchViewController.m */,
-				1C26620F18550814001F982E /* ResultsViewController.h */,
-				1C26621018550814001F982E /* ResultsViewController.m */,
-				1C64F12D1867D26A00DD75A2 /* ResultCell.h */,
-				1C64F12E1867D26A00DD75A2 /* ResultCell.m */,
-				1CA6595A1867D850008C669B /* ArticleViewController.h */,
-				1CA6595B1867D851008C669B /* ArticleViewController.m */,
-			);
-			name = "= Basic Search";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +474,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C400A9E1869FB1800891D36 /* Sections.json in Resources */,
 				1C26620518550463001F982E /* button_normal.png in Resources */,
 				1CA5E06E18522FA300A9FB8C /* Images.xcassets in Resources */,
 				1CA5E06018522FA300A9FB8C /* InfoPlist.strings in Resources */,
@@ -510,6 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA5E0A3185249CE00A9FB8C /* Article.m in Sources */,
+				1C398DBE1868DA1600B0D49B /* SearchChoicesViewController.m in Sources */,
 				1CA5E0AF1852585F00A9FB8C /* ArticleBuilder.m in Sources */,
 				1CA6595F1867EB5B008C669B /* Fields.m in Sources */,
 				1C26621118550814001F982E /* ResultsViewController.m in Sources */,
