@@ -26,6 +26,9 @@
 		1C398DB11868C91E00B0D49B /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C398DAF1868C91E00B0D49B /* placeholder@2x.png */; };
 		1C398DBE1868DA1600B0D49B /* SearchChoicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C398DBD1868DA1600B0D49B /* SearchChoicesViewController.m */; };
 		1C400A9E1869FB1800891D36 /* Sections.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C400A9D1869FB1800891D36 /* Sections.json */; };
+		1C400AA01869FB6200891D36 /* Notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 1C400A9F1869FB6200891D36 /* Notes.md */; };
+		1C400AA31869FBBB00891D36 /* SectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C400AA21869FBBB00891D36 /* SectionsTableViewController.m */; };
+		1C400AA61869FC3600891D36 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C400AA51869FC3600891D36 /* Section.m */; };
 		1C64F12F1867D26A00DD75A2 /* ResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C64F12E1867D26A00DD75A2 /* ResultCell.m */; };
 		1CA5E05618522FA300A9FB8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05518522FA300A9FB8C /* Foundation.framework */; };
 		1CA5E05818522FA300A9FB8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5E05718522FA300A9FB8C /* CoreGraphics.framework */; };
@@ -94,7 +97,12 @@
 		1C398DAF1868C91E00B0D49B /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
 		1C398DBC1868DA1600B0D49B /* SearchChoicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchChoicesViewController.h; sourceTree = "<group>"; };
 		1C398DBD1868DA1600B0D49B /* SearchChoicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchChoicesViewController.m; sourceTree = "<group>"; };
-		1C400A9D1869FB1800891D36 /* Sections.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sections.json; sourceTree = "<group>"; };
+		1C400A9D1869FB1800891D36 /* Sections.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sections.json; path = "Guardian Networking Sample/Sections.json"; sourceTree = "<group>"; };
+		1C400A9F1869FB6200891D36 /* Notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.md; sourceTree = "<group>"; };
+		1C400AA11869FBBB00891D36 /* SectionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionsTableViewController.h; sourceTree = "<group>"; };
+		1C400AA21869FBBB00891D36 /* SectionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionsTableViewController.m; sourceTree = "<group>"; };
+		1C400AA41869FC3600891D36 /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
+		1C400AA51869FC3600891D36 /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
 		1C64F12D1867D26A00DD75A2 /* ResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultCell.h; sourceTree = "<group>"; };
 		1C64F12E1867D26A00DD75A2 /* ResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultCell.m; sourceTree = "<group>"; };
 		1CA5E05218522FA300A9FB8C /* Guardian Networking Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guardian Networking Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,7 +325,6 @@
 				1CA5E05E18522FA300A9FB8C /* InfoPlist.strings */,
 				1CA5E06118522FA300A9FB8C /* main.m */,
 				1CA5E06318522FA300A9FB8C /* Guardian Networking Sample-Prefix.pch */,
-				1C400A9D1869FB1800891D36 /* Sections.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -357,6 +364,8 @@
 				1CA5E06718522FA300A9FB8C /* Main.storyboard */,
 				1C398DBC1868DA1600B0D49B /* SearchChoicesViewController.h */,
 				1C398DBD1868DA1600B0D49B /* SearchChoicesViewController.m */,
+				1C400AA11869FBBB00891D36 /* SectionsTableViewController.h */,
+				1C400AA21869FBBB00891D36 /* SectionsTableViewController.m */,
 				1C398DB41868D58F00B0D49B /* BasicSearchViewController */,
 				1C398DB31868D57B00B0D49B /* = Results VCs + More */,
 			);
@@ -372,6 +381,8 @@
 				1CA5E0AE1852585F00A9FB8C /* ArticleBuilder.m */,
 				1CA6595D1867EB5B008C669B /* Fields.h */,
 				1CA6595E1867EB5B008C669B /* Fields.m */,
+				1C400AA41869FC3600891D36 /* Section.h */,
+				1C400AA51869FC3600891D36 /* Section.m */,
 			);
 			name = " = Model + More";
 			sourceTree = "<group>";
@@ -382,6 +393,8 @@
 				1CA5E08A18522FF600A9FB8C /* Constants.h */,
 				1CA5E08E1852382300A9FB8C /* GuardianAPIHelper.h */,
 				1CA5E08F1852382300A9FB8C /* GuardianAPIHelper.m */,
+				1C400A9D1869FB1800891D36 /* Sections.json */,
+				1C400A9F1869FB6200891D36 /* Notes.md */,
 			);
 			name = "=Reference";
 			path = ..;
@@ -494,6 +507,7 @@
 				1CA5E06918522FA300A9FB8C /* Main.storyboard in Resources */,
 				1C26620C18550463001F982E /* cell_top@2x.png in Resources */,
 				1C26620718550463001F982E /* cell_bottom@2x.png in Resources */,
+				1C400AA01869FB6200891D36 /* Notes.md in Resources */,
 				1C26620D18550463001F982E /* common_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,11 +569,13 @@
 				1CA5E0AF1852585F00A9FB8C /* ArticleBuilder.m in Sources */,
 				1CA6595F1867EB5B008C669B /* Fields.m in Sources */,
 				1C26621118550814001F982E /* ResultsViewController.m in Sources */,
+				1C400AA31869FBBB00891D36 /* SectionsTableViewController.m in Sources */,
 				1CA6595C1867D851008C669B /* ArticleViewController.m in Sources */,
 				1CFBEB6D1865EE6900B51A16 /* GuardianController.m in Sources */,
 				1CFBEB701865EE9B00B51A16 /* GuardianAFHTTPClient.m in Sources */,
 				1CA5E06618522FA300A9FB8C /* AppDelegate.m in Sources */,
 				1CFDEB1E1867B27600BD3041 /* BasicSearchViewController.m in Sources */,
+				1C400AA61869FC3600891D36 /* Section.m in Sources */,
 				1C64F12F1867D26A00DD75A2 /* ResultCell.m in Sources */,
 				1CA5E06218522FA300A9FB8C /* main.m in Sources */,
 				1CA5E0901852382300A9FB8C /* GuardianAPIHelper.m in Sources */,
