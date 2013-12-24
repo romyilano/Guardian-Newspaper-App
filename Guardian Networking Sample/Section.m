@@ -17,6 +17,7 @@
 {
     if ((self = [super init]))
     {
+        _sectionID = sectionID;
         _webTitle = webTitle;
         _webURLAsString = webURLAsString;
         _apiURLAsString = apiURLAsString;

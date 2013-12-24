@@ -12,12 +12,13 @@
 #import "GuardianAFHTTPClient.h"
 
 #import "Article.h"
+#import "Section.h"
 
 #import "GuardianAPIHelper.h"
 
 @interface GuardianController ()
 @property (strong, nonatomic) NSDictionary *defaultParameters;
--(NSArray *)articlesFromJSONResponseObject:(id)responseObject;
+
 @end
 
 
@@ -93,6 +94,34 @@
                                          }];
 }
 
+-(void)loadSectionsWithBlock:(void (^)(NSArray *, BOOL, NSError *))completionBlock
+{
+    NSString *sectionsPath = @"sections";
+    
+    [[GuardianAFHTTPClient sharedClient] registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    [[GuardianAFHTTPClient sharedClient] setDefaultHeader:@"Accept" value:@"application/json"];
+    
+    [[GuardianAFHTTPClient sharedClient] getPath:sectionsPath
+                                      parameters:nil
+                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                             
+                                             NSArray *finalArray = [self sectionsFromJSONResponseObject:responseObject];
+                                             
+                                             if (completionBlock)
+                                             {
+                                                 completionBlock(finalArray, YES, nil);
+                                             }
+                                             
+                                         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                             
+                                             if (completionBlock)
+                                             {
+                                                 completionBlock([NSArray array], NO, error);
+                                             }
+                                             
+                                         }];
+}
+
 #pragma mark - Model Builder Methods
 -(NSArray *)articlesFromJSONResponseObject:(id)responseObject
 {
@@ -110,6 +139,25 @@
     }
     
     return  [NSArray arrayWithArray:cleanArticleArrayWorking];
+}
+
+-(NSArray *)sectionsFromJSONResponseObject:(id)resopnseObject
+{
+    NSDictionary *responseObjectDictionary = resopnseObject;
+    NSDictionary *responseDictionary = responseObjectDictionary[@"response"];
+    NSArray *resultsArray = (NSArray *)responseDictionary[@"results"];
+    
+    NSMutableArray *workingArray = [[NSMutableArray alloc] initWithCapacity:resultsArray.count];
+    
+    // clean up array and put it into clean properly formatted section objects
+    
+    for (NSDictionary *sectionObj in resultsArray)
+    {
+        Section *section = [[Section alloc] initWithJSONDictionary:sectionObj];
+        [workingArray addObject:section];
+    }
+    
+    return [NSArray arrayWithArray:workingArray];
 }
 
 
