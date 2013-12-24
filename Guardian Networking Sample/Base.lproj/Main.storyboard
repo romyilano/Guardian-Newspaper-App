@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - AFNetworking 1.3.3 Sample-->
+        <!--Table View Controller - Guardian iPhone App-->
         <scene sceneID="Q9O-UE-A7g">
             <objects>
                 <tableViewController id="T7Y-Zc-Gfj" sceneMemberID="viewController">
@@ -104,7 +104,7 @@
                             <outlet property="delegate" destination="T7Y-Zc-Gfj" id="RMA-FU-oLN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="AFNetworking 1.3.3 Sample" id="kJd-Qb-4Rz"/>
+                    <navigationItem key="navigationItem" title="Guardian iPhone App" id="kJd-Qb-4Rz"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFS-XV-C69" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
