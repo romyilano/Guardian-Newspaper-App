@@ -11,9 +11,11 @@
 #import "ResultCell.h"
 
 #import <MBProgressHUD/MBProgressHUD.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #import "Section.h"
 #import "Article.h"
+#import "Fields.h"
 
 @interface ArticlesTableViewController ()
 {
@@ -97,6 +99,10 @@
     // Configure the
     Article *article = self.articles[indexPath.row];
     cell.articleTitleLabel.text = article.webTitle;
+    
+    [cell.articleImage setImageWithURL:article.fields.thumbnailURL
+                      placeholderImage:[UIImage imageNamed:@"placeholder"]
+                               options:SDWebImageRefreshCached];
     
     return cell;
 }
