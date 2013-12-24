@@ -11,6 +11,10 @@
 @interface GuardianController : NSObject
 + (id)sharedController;
 
+-(void)loadArticlesWithParameters:(NSDictionary *)searchParamters
+              andCompletionBlock:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
+
+// loads articles based on search terms with paramters dictionary
 -(void)loadArticlesWithSearchTerm:(NSString *)searchTerm
                     andParameters:(NSDictionary *)searchParameters
                           results:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;

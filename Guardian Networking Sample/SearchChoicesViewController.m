@@ -105,6 +105,10 @@
 }
 
 #pragma - UIPickerView DataSource and Delegate Methods
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
 
 
 @end

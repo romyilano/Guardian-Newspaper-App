@@ -52,6 +52,37 @@
 }
 
 #pragma mark - Networking Methods
+
+-(void)loadArticlesWithParameters:(NSDictionary *)searchParamters
+               andCompletionBlock:(void (^)(NSArray *, BOOL, NSError *))completionBlock
+{
+    NSString *searchPath = @"search";
+    
+    [[GuardianAFHTTPClient sharedClient] registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    [[GuardianAFHTTPClient sharedClient] setDefaultHeader:@"Accept" value:@"application/json"];
+    
+    [[GuardianAFHTTPClient sharedClient] getPath:searchPath
+                                      parameters:searchParamters
+                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                             
+                                             NSArray *finalArray = [self articlesFromJSONResponseObject:responseObject];
+                                             
+                                             if (completionBlock)
+                                             {
+                                                 completionBlock(finalArray, YES, nil);
+                                             }
+                                             
+                                         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                             
+                                             if (completionBlock)
+                                             {
+                                                 completionBlock([NSArray array], NO, error);
+                                             }
+                                             
+                                         }];
+    
+}
+
 -(void)loadArticlesWithSearchTerm:(NSString *)searchTerm
                     andParameters:(NSDictionary *)searchParameters
                           results:(void (^)(NSArray *, BOOL, NSError *))completionBlock

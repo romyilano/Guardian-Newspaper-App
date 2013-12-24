@@ -99,7 +99,6 @@
         Article *selectedArticle = self.passedArticles[indexPath.row];
         
         ArticleViewController *articleViewController = (ArticleViewController *)segue.destinationViewController;
-        
         articleViewController.article = selectedArticle;
     }
 }

@@ -7,6 +7,7 @@
 //
 
 #import "SectionsTableViewController.h"
+#import "ArticlesTableViewController.h"
 
 #import "GuardianController.h"
 #import "Section.h"
@@ -54,7 +55,6 @@
                                         message:@"No Sections found"
                                        delegate:self
                               cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-
             
         }
     }];
@@ -100,14 +100,21 @@
 }
 
 
-
-
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"SectionsArticlesSegue"])
+    {
+        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        Section *selectedSection = self.sections[selectedRowIndex.row];
+        ArticlesTableViewController *articlesTableViewController = segue.destinationViewController;
+        articlesTableViewController.section = selectedSection;
+    }
 }
+
+#pragma mark - Custom Methods
 
 
 @end
