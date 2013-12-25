@@ -48,6 +48,8 @@
     
     // get articles
     
+    self.title = self.section.webTitle;
+    
     _controller = [GuardianController sharedController];
     
     
