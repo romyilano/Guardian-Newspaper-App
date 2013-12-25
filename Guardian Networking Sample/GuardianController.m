@@ -23,8 +23,6 @@
 
 
 @implementation GuardianController
-
-
 + (id)sharedController
 {
     static dispatch_once_t onceToken;

@@ -26,6 +26,7 @@
 		1C398DB11868C91E00B0D49B /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C398DAF1868C91E00B0D49B /* placeholder@2x.png */; };
 		1C398DBE1868DA1600B0D49B /* SearchChoicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C398DBD1868DA1600B0D49B /* SearchChoicesViewController.m */; };
 		1C39D4DC186A13B300637898 /* ArticlesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C39D4DB186A13B300637898 /* ArticlesTableViewController.m */; };
+		1C3F157C186A7707006FA9A5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F157B186A7707006FA9A5 /* HomeViewController.m */; };
 		1C400A9E1869FB1800891D36 /* Sections.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C400A9D1869FB1800891D36 /* Sections.json */; };
 		1C400AA01869FB6200891D36 /* Notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 1C400A9F1869FB6200891D36 /* Notes.md */; };
 		1C400AA31869FBBB00891D36 /* SectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C400AA21869FBBB00891D36 /* SectionsTableViewController.m */; };
@@ -100,6 +101,8 @@
 		1C398DBD1868DA1600B0D49B /* SearchChoicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchChoicesViewController.m; sourceTree = "<group>"; };
 		1C39D4DA186A13B300637898 /* ArticlesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlesTableViewController.h; sourceTree = "<group>"; };
 		1C39D4DB186A13B300637898 /* ArticlesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlesTableViewController.m; sourceTree = "<group>"; };
+		1C3F157A186A7707006FA9A5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		1C3F157B186A7707006FA9A5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		1C400A9D1869FB1800891D36 /* Sections.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sections.json; path = "Guardian Networking Sample/Sections.json"; sourceTree = "<group>"; };
 		1C400A9F1869FB6200891D36 /* Notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.md; sourceTree = "<group>"; };
 		1C400AA11869FBBB00891D36 /* SectionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionsTableViewController.h; sourceTree = "<group>"; };
@@ -301,6 +304,15 @@
 			name = SearchChoicesViewController;
 			sourceTree = "<group>";
 		};
+		1C3F1579186A76F5006FA9A5 /* = Home UI */ = {
+			isa = PBXGroup;
+			children = (
+				1C3F157A186A7707006FA9A5 /* HomeViewController.h */,
+				1C3F157B186A7707006FA9A5 /* HomeViewController.m */,
+			);
+			name = "= Home UI";
+			sourceTree = "<group>";
+		};
 		1CA5E04918522FA300A9FB8C = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				1CA5E06718522FA300A9FB8C /* Main.storyboard */,
+				1C3F1579186A76F5006FA9A5 /* = Home UI */,
 				1C39D4D5186A131300637898 /* = Search */,
 				1C183098186A122B0090751F /* = Sections */,
 			);
@@ -601,6 +614,7 @@
 				1C400AA31869FBBB00891D36 /* SectionsTableViewController.m in Sources */,
 				1C39D4DC186A13B300637898 /* ArticlesTableViewController.m in Sources */,
 				1CA6595C1867D851008C669B /* ArticleViewController.m in Sources */,
+				1C3F157C186A7707006FA9A5 /* HomeViewController.m in Sources */,
 				1CFBEB6D1865EE6900B51A16 /* GuardianController.m in Sources */,
 				1CFBEB701865EE9B00B51A16 /* GuardianAFHTTPClient.m in Sources */,
 				1CA5E06618522FA300A9FB8C /* AppDelegate.m in Sources */,
