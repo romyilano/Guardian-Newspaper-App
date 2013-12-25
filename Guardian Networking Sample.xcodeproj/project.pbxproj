@@ -239,16 +239,6 @@
 			name = "Placeholder Graphics";
 			sourceTree = "<group>";
 		};
-		1C398DB31868D57B00B0D49B /* = Results VCs + More */ = {
-			isa = PBXGroup;
-			children = (
-				1C398DB51868D59800B0D49B /* ArticleViewController */,
-				1C398DB71868D5AC00B0D49B /* ResultCell */,
-				1C398DB61868D5A600B0D49B /* ResultsViewController */,
-			);
-			name = "= Results VCs + More";
-			sourceTree = "<group>";
-		};
 		1C398DB41868D58F00B0D49B /* BasicSearchViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,7 +278,9 @@
 		1C39D4D5186A131300637898 /* = Search */ = {
 			isa = PBXGroup;
 			children = (
-				1C398DB31868D57B00B0D49B /* = Results VCs + More */,
+				1C398DB51868D59800B0D49B /* ArticleViewController */,
+				1C398DB71868D5AC00B0D49B /* ResultCell */,
+				1C398DB61868D5A600B0D49B /* ResultsViewController */,
 				1C398DB41868D58F00B0D49B /* BasicSearchViewController */,
 				1C39D4D6186A132A00637898 /* SearchChoicesViewController */,
 			);
