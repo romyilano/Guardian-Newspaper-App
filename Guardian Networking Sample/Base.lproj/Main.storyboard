@@ -341,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5u-oI-W5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2446" y="-2126"/>
+            <point key="canvasLocation" x="2369" y="-2228"/>
         </scene>
         <!--Main View Controller - Guardian-->
         <scene sceneID="hDq-ue-AwV">
@@ -360,29 +360,30 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditorsPickCell" rowHeight="68" id="XWT-Dm-xmF" customClass="ResultCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EditorsPickCell" rowHeight="68" id="XWT-Dm-xmF" customClass="ResultCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="68"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XWT-Dm-xmF" id="dim-en-zap">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="y8H-f6-l1t">
-                                                    <rect key="frame" x="0.0" y="7" width="77" height="67"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dbX-n6-48Y">
-                                                    <rect key="frame" x="85" y="11" width="215" height="45"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="7yz-yQ-uzp" userLabel="Guardian Image">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="67"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guardian Article" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iA8-jq-VZV">
+                                                    <rect key="frame" x="80" y="3" width="210" height="61"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="articleImage" destination="y8H-f6-l1t" id="0FZ-xa-zdV"/>
-                                            <outlet property="articleTitleLabel" destination="dbX-n6-48Y" id="4dh-Wc-rdT"/>
+                                            <outlet property="articleImage" destination="7yz-yQ-uzp" id="wOc-ea-XwI"/>
+                                            <outlet property="articleTitleLabel" destination="iA8-jq-VZV" id="OZi-w8-aDz"/>
+                                            <segue destination="1BH-aS-fhL" kind="push" identifier="EditorsPickArticleSegue" id="S6e-r8-K83"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -429,6 +430,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOG-TG-bAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="355"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="w06-b0-tV5">
+            <objects>
+                <viewController id="1BH-aS-fhL" customClass="ArticleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zab-Nu-8XO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleAspectFit" id="DLd-1V-bPl">
+                                <rect key="frame" x="0.0" y="63" width="320" height="565"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1BH-aS-fhL" id="e9A-WG-jRf"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="saR-Q2-gCE"/>
+                    <connections>
+                        <outlet property="webView" destination="DLd-1V-bPl" id="PYg-mk-nVz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t5B-PN-bnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1555" y="369"/>
         </scene>
         <!--Sections Table View Controller - Sections-->
         <scene sceneID="0jg-sc-ZU6">
@@ -658,8 +687,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="v1H-QE-lwT"/>
         <segue reference="gNi-hy-oRI"/>
-        <segue reference="dRI-EK-nKF"/>
+        <segue reference="WGs-JS-75P"/>
+        <segue reference="R4j-bJ-ULh"/>
     </inferredMetricsTieBreakers>
 </document>

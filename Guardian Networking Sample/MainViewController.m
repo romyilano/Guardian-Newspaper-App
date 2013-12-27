@@ -12,7 +12,8 @@
 #import "GuardianController.h"
 #import "ResultCell.h"
 #import "ResultsViewController.h"
-#import "ArticlesTableViewController.h"
+#import "ArticleViewController.h"
+
 
 #import "Section.h"
 #import "Article.h"
@@ -52,11 +53,15 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    [_controller loadEditorsPickArticlesWithParameters:nil
+    
+    NSDictionary *loadParameters = @{@"page-size" : @"40",
+                                     @"show-fields" : @"all",
+                                     @"show-editors-picks" : @"true" };
+    
+    [_controller loadEditorsPickArticlesWithParameters:loadParameters
                                     andCompletionBlock:^(NSArray *results, BOOL success, NSError *error) {
                                         if (!error)
                                         {
-                                            
                                             self.editorsPicksArticles = results;
                                             [self.tableView reloadData];
                                             
@@ -71,12 +76,17 @@
 }
 
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"EditorsPickArticleSegue"])
+    {
+        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        Article *selectedArticle = self.editorsPicksArticles[selectedRowIndex.row];
+        
+        ArticleViewController *articleViewController = segue.destinationViewController;
+        articleViewController.article = selectedArticle;
+        
+    }
 }
 
 

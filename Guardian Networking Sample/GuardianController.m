@@ -88,8 +88,6 @@
     
     NSMutableDictionary *workingParameters = [[NSMutableDictionary alloc] init];
     
-    [workingParameters setObject:@"all" forKey:@"show-fields"];
-    [workingParameters setObject:@"true" forKey:@"show-editors-picks"];
     [workingParameters addEntriesFromDictionary:parameters];
     [workingParameters setObject:kGuardianKey forKey:@"api-key"];
     
