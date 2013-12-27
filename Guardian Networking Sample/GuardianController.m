@@ -132,52 +132,6 @@
                                          }];
 }
 
--(void)loadEditorsPickArticlesWithParameters:(NSDictionary *)parameters andCompletionBlock:(void (^)(NSArray *, BOOL, NSError *))completionBlock
-{
-    // example
-    // http://content.guardianapis.com/?show-related=true&show-editors-picks=true
-
-    
-    NSMutableDictionary *workingParameters = [[NSMutableDictionary alloc] init];
-    
-    [workingParameters addEntriesFromDictionary:parameters];
-    [workingParameters setObject:kGuardianKey forKey:@"api-key"];
-    
-    [[GuardianAFHTTPClient sharedClient] registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    [[GuardianAFHTTPClient sharedClient] setDefaultHeader:@"Accept" value:@"application/json"];
-    
-    [[GuardianAFHTTPClient sharedClient] getPath:nil
-                                      parameters:[workingParameters copy]
-                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                             
-                                             NSDictionary *responseObjectDictionary =(NSDictionary *)responseObject;
-                                             NSDictionary *responseDictionary = responseObjectDictionary[@"response"];
-                                             NSArray *editorsPickArray = (NSArray *)responseDictionary[@"editorsPicks"];
-                                             
-                                             NSMutableArray *finalArray = [[NSMutableArray alloc] initWithCapacity:editorsPickArray.count];
-                                             
-                                             for (NSDictionary *articleObj in editorsPickArray)
-                                             {
-                                                 Article *article = [[Article alloc] initWithDictionary:articleObj];
-                                                 [finalArray addObject:article];
-                                             }
-                                             
-                                             if (completionBlock)
-                                             {
-                                                 completionBlock([finalArray copy], YES, nil);
-                                             }
-                                             
-                                         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                             
-                                             if (completionBlock)
-                                             {
-                                                 completionBlock([NSArray array], NO, error);
-                                             }
-                                             
-                                         }];
-    
-}
-
 // to-do- phase this one out as it's redundant
 -(void)loadArticlesWithSearchTerm:(NSString *)searchTerm
                     andParameters:(NSDictionary *)searchParameters

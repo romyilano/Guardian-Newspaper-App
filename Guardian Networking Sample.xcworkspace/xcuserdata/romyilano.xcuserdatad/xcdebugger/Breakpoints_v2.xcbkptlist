@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Guardian Networking Sample/GuardianController.m"
-            timestampString = "409810825.594674"
+            timestampString = "409811024.617496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "-loadArticlesWithSearchTerm:andParameters:results:"
             landmarkType = "5">
          </BreakpointContent>
@@ -100,11 +100,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Guardian Networking Sample/GuardianController.m"
-            timestampString = "409810825.594674"
+            timestampString = "409811024.617496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "-loadArticlesWithSearchTerm:andParameters:results:"
             landmarkType = "5">
          </BreakpointContent>
