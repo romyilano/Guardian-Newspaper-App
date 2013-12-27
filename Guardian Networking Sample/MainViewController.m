@@ -58,15 +58,18 @@
                                      @"show-fields" : @"all",
                                      @"show-editors-picks" : @"true" };
     
-    [_controller loadEditorsPickArticlesWithParameters:loadParameters
-                                    andCompletionBlock:^(NSArray *results, BOOL success, NSError *error) {
-                                        if (!error)
-                                        {
-                                            self.editorsPicksArticles = results;
-                                            [self.tableView reloadData];
-                                            
-                                        }
-                                    }];
+
+    [_controller loadArticlesWithParameters:loadParameters
+                                       path:nil
+                                     ofType:@"editorsPicks"
+                         andCompletionBlock:^(NSArray *array, BOOL success, NSError *error) {
+                             if (!error)
+                             {
+                                 self.editorsPicksArticles = array;
+                                 [self.tableView reloadData];
+                                 
+                             }
+                         }];
 }
 
 - (void)didReceiveMemoryWarning

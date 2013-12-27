@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Guardian Networking Sample/GuardianController.m"
-            timestampString = "409631475.034608"
+            timestampString = "409810825.594674"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "-loadArticlesWithParameters:andCompletionBlock:"
             landmarkType = "5">
          </BreakpointContent>
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Guardian Networking Sample/GuardianController.m"
-            timestampString = "409809535.652219"
+            timestampString = "409810825.594674"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "-loadArticlesWithSearchTerm:andParameters:results:"
             landmarkType = "5">
          </BreakpointContent>
@@ -100,11 +100,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Guardian Networking Sample/GuardianController.m"
-            timestampString = "409809535.652219"
+            timestampString = "409810825.594674"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "-loadArticlesWithSearchTerm:andParameters:results:"
             landmarkType = "5">
          </BreakpointContent>
@@ -132,11 +132,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Guardian Networking Sample/GuardianController.m"
-            timestampString = "409631475.034608"
+            timestampString = "409810825.594674"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "-loadArticlesWithParameters:andCompletionBlock:"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,22 +154,6 @@
             startingLineNumber = "120"
             endingLineNumber = "120"
             landmarkName = "-searchBarButtonItemPressed:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Guardian Networking Sample/MainViewController.m"
-            timestampString = "409809535.652219"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "-viewDidAppear:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

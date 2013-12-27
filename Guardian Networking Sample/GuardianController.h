@@ -11,8 +11,15 @@
 @interface GuardianController : NSObject
 + (id)sharedController;
 
+// to do enumerate this
+-(void)loadArticlesWithParameters:(NSDictionary *)parameters
+                             path:(NSString *)path
+                           ofType:(NSString *)type
+               andCompletionBlock:(void (^)(NSArray *array, BOOL success, NSError *error))completionBlock;
+
+// refactoring so there doesn't have to be a separate sections/editors pick block
 -(void)loadArticlesWithParameters:(NSDictionary *)searchParamters
-              andCompletionBlock:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
+               andCompletionBlock:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
 
 -(void)loadSectionsWithBlock:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
 
