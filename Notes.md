@@ -59,6 +59,23 @@ Women in Leadership
 World News
 Environment
 
+
+array of ids
+@[ @"commentisfree",
+    @"world",
+    @"lifeandstyle",
+    @"technology",
+    @"environment",
+    @"books",
+    @"science",
+    @"artanddesign",
+    @"film",
+    @"music",
+    @"politics",
+    @"sport"
+    @"society"
+];
+
 Extra
 
 

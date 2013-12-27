@@ -176,35 +176,6 @@
 }
 
 
-
--(void)loadSectionsWithBlock:(void (^)(NSArray *, BOOL, NSError *))completionBlock
-{
-    NSString *sectionsPath = @"sections";
-    
-    [[GuardianAFHTTPClient sharedClient] registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    [[GuardianAFHTTPClient sharedClient] setDefaultHeader:@"Accept" value:@"application/json"];
-    
-    [[GuardianAFHTTPClient sharedClient] getPath:sectionsPath
-                                      parameters:nil
-                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                             
-                                             NSArray *finalArray = [self sectionsFromJSONResponseObject:responseObject];
-                                             
-                                             if (completionBlock)
-                                             {
-                                                 completionBlock(finalArray, YES, nil);
-                                             }
-                                             
-                                         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                             
-                                             if (completionBlock)
-                                             {
-                                                 completionBlock([NSArray array], NO, error);
-                                             }
-                                             
-                                         }];
-}
-
 #pragma mark - Model Builder Methods
 -(NSArray *)articlesFromJSONResponseObject:(id)responseObject
 {

@@ -49,27 +49,32 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    [_guardianController loadSectionsWithBlock:^(NSArray *results, BOOL success, NSError *error) {
-        if (!error)
-        {
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-            self.sections = results;
-            [self.tableView reloadData];
-            
-        }
-        else
-        {
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-            
-            [[[UIAlertView alloc] initWithTitle:@"Sorry"
-                                        message:@"No Sections found"
-                                       delegate:self
-                              cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-            
-        }
-    }];
+    NSString *sectionsPath = @"sections";
     
+    [_guardianController loadArticlesWithParameters:nil
+                                               path:sectionsPath
+                                             ofType:@"sections"
+                                 andCompletionBlock:^(NSArray *array, BOOL success, NSError *error) {
+                                    
+                                     if (!error)
+                                     {
+                                         [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                         self.sections = array;
+                                         [self.tableView reloadData];
+                                         
+                                     }
+                                     else
+                                     {
+                                         [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                         
+                                         [[[UIAlertView alloc] initWithTitle:@"Sorry"
+                                                                     message:@"No Sections found"
+                                                                    delegate:self
+                                                           cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+                                         
+                                     }
 
+                                 }];
 }
 
 - (void)didReceiveMemoryWarning

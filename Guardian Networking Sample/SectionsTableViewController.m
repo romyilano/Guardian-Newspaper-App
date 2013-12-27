@@ -38,27 +38,27 @@
     
     _controller = [GuardianController sharedController];
     
-    [_controller loadSectionsWithBlock:^(NSArray *results, BOOL success, NSError *error) {
-        if (!error)
-        {
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-            
-            self.sections = results;
-            [self.tableView reloadData];
-            
-        }
-        else
-        {
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-            
-            [[[UIAlertView alloc] initWithTitle:@"Sorry"
-                                        message:@"No Sections found"
-                                       delegate:self
-                              cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-            
-        }
-    }];
-    
+    [_controller loadArticlesWithParameters:nil
+                                               path:@"sections"
+                                             ofType:@"sections"
+                                 andCompletionBlock:^(NSArray *array, BOOL success, NSError *error) {
+                                     
+                                     if (!error)
+                                     {
+                                         self.sections = array;
+                                         [self.tableView reloadData];
+                                         
+                                     }
+                                     else
+                                     {
+                                         [[[UIAlertView alloc] initWithTitle:@"Sorry"
+                                                                     message:@"No Sections found"
+                                                                    delegate:self
+                                                           cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+                                         
+                                     }
+                                 }];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated

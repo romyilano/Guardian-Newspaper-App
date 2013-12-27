@@ -21,8 +21,6 @@
 -(void)loadArticlesWithParameters:(NSDictionary *)searchParamters
                andCompletionBlock:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
 
--(void)loadSectionsWithBlock:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
-
 // to-do - phase this out as loadArticlesWithParameters:andCompletionBlock: does the job
 // loads articles based on search terms with paramters dictionary
 -(void)loadArticlesWithSearchTerm:(NSString *)searchTerm
