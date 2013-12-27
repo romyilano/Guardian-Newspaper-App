@@ -53,7 +53,6 @@
         if (!error)
         {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
-            
             self.sections = results;
             [self.tableView reloadData];
             
@@ -118,6 +117,7 @@
                                  andCompletionBlock:^(NSArray *results, BOOL success, NSError *error) {
                                      if (!error)
                                      {
+                                         
                                          self.articles = results;
                                          [MBProgressHUD hideHUDForView:self.view animated:YES];
                                          

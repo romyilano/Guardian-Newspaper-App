@@ -12,4 +12,5 @@
 
 extern NSString *const guardianSearchURL;
 extern NSString *const guardianBaseURL;
+
 @end

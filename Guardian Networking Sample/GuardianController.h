@@ -14,17 +14,22 @@
 -(void)loadArticlesWithParameters:(NSDictionary *)searchParamters
               andCompletionBlock:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
 
+-(void)loadSectionsWithBlock:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
+
+-(void)loadEditorsPickArticlesWithParameters:(NSDictionary *)parameters andCompletionBlock:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
+
+
+// to-do - phase this out as loadArticlesWithParameters:andCompletionBlock: does the job
 // loads articles based on search terms with paramters dictionary
 -(void)loadArticlesWithSearchTerm:(NSString *)searchTerm
                     andParameters:(NSDictionary *)searchParameters
                           results:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
-
--(void)loadSectionsWithBlock:(void(^)(NSArray *results, BOOL success, NSError *error))completionBlock;
 
 // returns an Array of Article objects from a JSON Response Object
 -(NSArray *)articlesFromJSONResponseObject:(id)responseObject;
 
 // returns an Array of Section Objects from a JSON Response Object
 -(NSArray *)sectionsFromJSONResponseObject:(id)resopnseObject;
+
 
 @end

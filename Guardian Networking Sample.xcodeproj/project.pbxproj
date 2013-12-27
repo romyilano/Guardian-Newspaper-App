@@ -61,6 +61,7 @@
 		1CA5E0B01852585F00A9FB8C /* ArticleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5E0AE1852585F00A9FB8C /* ArticleBuilder.m */; };
 		1CA6595C1867D851008C669B /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6595B1867D851008C669B /* ArticleViewController.m */; };
 		1CA6595F1867EB5B008C669B /* Fields.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6595E1867EB5B008C669B /* Fields.m */; };
+		1CB59866186B877C00914C35 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB59865186B877B00914C35 /* MainViewController.m */; };
 		1CFBEB6D1865EE6900B51A16 /* GuardianController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFBEB6C1865EE6900B51A16 /* GuardianController.m */; };
 		1CFBEB701865EE9B00B51A16 /* GuardianAFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFBEB6F1865EE9B00B51A16 /* GuardianAFHTTPClient.m */; };
 		1CFDEB1E1867B27600BD3041 /* BasicSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFDEB1D1867B27600BD3041 /* BasicSearchViewController.m */; };
@@ -143,6 +144,8 @@
 		1CA6595B1867D851008C669B /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
 		1CA6595D1867EB5B008C669B /* Fields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fields.h; sourceTree = "<group>"; };
 		1CA6595E1867EB5B008C669B /* Fields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fields.m; sourceTree = "<group>"; };
+		1CB59864186B877B00914C35 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		1CB59865186B877B00914C35 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		1CFBEB6B1865EE6900B51A16 /* GuardianController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianController.h; sourceTree = "<group>"; };
 		1CFBEB6C1865EE6900B51A16 /* GuardianController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardianController.m; sourceTree = "<group>"; };
 		1CFBEB6E1865EE9B00B51A16 /* GuardianAFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianAFHTTPClient.h; sourceTree = "<group>"; };
@@ -399,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				1CA5E06718522FA300A9FB8C /* Main.storyboard */,
+				1CB59867186B882B00914C35 /* = Main Screen UI */,
 				1C3F1579186A76F5006FA9A5 /* = Home UI */,
 				1C39D4D5186A131300637898 /* = Search */,
 				1C183098186A122B0090751F /* = Sections */,
@@ -432,6 +436,15 @@
 			);
 			name = "=Reference";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		1CB59867186B882B00914C35 /* = Main Screen UI */ = {
+			isa = PBXGroup;
+			children = (
+				1CB59864186B877B00914C35 /* MainViewController.h */,
+				1CB59865186B877B00914C35 /* MainViewController.m */,
+			);
+			name = "= Main Screen UI";
 			sourceTree = "<group>";
 		};
 		1CFDEB1F1867B30400BD3041 /* AppDelegate */ = {
@@ -611,6 +624,7 @@
 				1CFBEB701865EE9B00B51A16 /* GuardianAFHTTPClient.m in Sources */,
 				1CA5E06618522FA300A9FB8C /* AppDelegate.m in Sources */,
 				1CFDEB1E1867B27600BD3041 /* BasicSearchViewController.m in Sources */,
+				1CB59866186B877C00914C35 /* MainViewController.m in Sources */,
 				1C400AA61869FC3600891D36 /* Section.m in Sources */,
 				1C64F12F1867D26A00DD75A2 /* ResultCell.m in Sources */,
 				1CA5E06218522FA300A9FB8C /* main.m in Sources */,

@@ -1,0 +1,121 @@
+//
+//  MainViewController.m
+//  Guardian Networking Sample
+//
+//  Created by Romy Ilano on 12/25/13.
+//  Copyright (c) 2013 Romy Ilano. All rights reserved.
+//
+
+#import "MainViewController.h"
+
+
+#import "GuardianController.h"
+#import "ResultCell.h"
+#import "ResultsViewController.h"
+#import "ArticlesTableViewController.h"
+
+#import "Section.h"
+#import "Article.h"
+#import "Fields.h"
+
+
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+
+@interface MainViewController ()
+{
+    GuardianController *_controller;
+}
+@property (strong, nonatomic) NSArray *editorsPicksArticles;
+@end
+
+@implementation MainViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    _controller = [GuardianController sharedController];
+     self.title = @"Guardian Newspaper";
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [_controller loadEditorsPickArticlesWithParameters:nil
+                                    andCompletionBlock:^(NSArray *results, BOOL success, NSError *error) {
+                                        if (!error)
+                                        {
+                                            
+                                            
+                                            self.editorsPicksArticles = results;
+                                            [self.tableView reloadData];
+                                            
+                                        }
+                                    }];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+
+
+#pragma mark - UITableViewDataSource & Delegate Methods
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.editorsPicksArticles.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"EditorsPickCell";
+    ResultCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    // configure cell
+    Article *article = self.editorsPicksArticles[indexPath.row];
+    
+    cell.articleTitleLabel.text = article.webTitle;
+    [cell.articleImage setImageWithURL:article.fields.thumbnailURL
+                      placeholderImage:[UIImage imageNamed:@"placeholder"]
+                               options:SDWebImageRefreshCached];
+  
+    return cell;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"Editor's Picks";
+}
+
+
+#pragma mark - Action Methods
+
+- (IBAction)searchButtonPressed:(UIBarButtonItem *)sender {
+}
+@end

@@ -5,10 +5,13 @@
 //  Created by Romy Ilano on 12/24/13.
 //  Copyright (c) 2013 Romy Ilano. All rights reserved.
 //
+// Abstract:
+// Search bar at top with Sections lists
 
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *searchBarButtonItem;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
