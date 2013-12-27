@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking 3
 #define COCOAPODS_VERSION_PATCH_AFNetworking 3
 
+// ECSlidingViewController
+#define COCOAPODS_POD_AVAILABLE_ECSlidingViewController
+#define COCOAPODS_VERSION_MAJOR_ECSlidingViewController 2
+#define COCOAPODS_VERSION_MINOR_ECSlidingViewController 0
+#define COCOAPODS_VERSION_PATCH_ECSlidingViewController 0
+
 // MBProgressHUD
 #define COCOAPODS_POD_AVAILABLE_MBProgressHUD
 #define COCOAPODS_VERSION_MAJOR_MBProgressHUD 0

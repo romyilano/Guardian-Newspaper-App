@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-ECSlidingViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>739BCEC20750423E989C9BCD</key>
+		<key>295EEA9FECED41A6A9073840</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7BC1122E583848EB94F33E41</key>
+		<key>5376D6B540F04F8088F8DCEE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9A1D5F120AE84DC881AB0F2E</key>
+		<key>D5A5B617B6F242B6B90BBF92</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D676FE8E01BC462B8D5F8ABB</key>
+		<key>D62E4D1C9E63413090ADA300</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB58F72421A34471A2ABC931</key>
 		<dict>
 			<key>primary</key>
 			<true/>

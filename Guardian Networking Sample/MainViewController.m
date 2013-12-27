@@ -57,7 +57,6 @@
                                         if (!error)
                                         {
                                             
-                                            
                                             self.editorsPicksArticles = results;
                                             [self.tableView reloadData];
                                             
