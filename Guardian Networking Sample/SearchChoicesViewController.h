@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchChoicesViewController : UIViewController <UITextFieldDelegate,  UIPickerViewDataSource, UIPickerViewDelegate>
+@interface SearchChoicesViewController : UIViewController <UITextFieldDelegate,  UIPickerViewDataSource, UIPickerViewDelegate, UIScrollViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UIButton *clearButton;

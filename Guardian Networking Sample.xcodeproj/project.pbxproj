@@ -281,11 +281,10 @@
 		1C39D4D5186A131300637898 /* = Search */ = {
 			isa = PBXGroup;
 			children = (
-				1C398DB51868D59800B0D49B /* ArticleViewController */,
+				1C39D4D6186A132A00637898 /* SearchChoicesViewController */,
 				1C398DB71868D5AC00B0D49B /* ResultCell */,
 				1C398DB61868D5A600B0D49B /* ResultsViewController */,
 				1C398DB41868D58F00B0D49B /* BasicSearchViewController */,
-				1C39D4D6186A132A00637898 /* SearchChoicesViewController */,
 			);
 			name = "= Search";
 			sourceTree = "<group>";
@@ -293,8 +292,8 @@
 		1C39D4D6186A132A00637898 /* SearchChoicesViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1C398DBD1868DA1600B0D49B /* SearchChoicesViewController.m */,
 				1C398DBC1868DA1600B0D49B /* SearchChoicesViewController.h */,
+				1C398DBD1868DA1600B0D49B /* SearchChoicesViewController.m */,
 			);
 			name = SearchChoicesViewController;
 			sourceTree = "<group>";
@@ -441,10 +440,19 @@
 		1CB59867186B882B00914C35 /* = Main Screen UI */ = {
 			isa = PBXGroup;
 			children = (
+				1CECB22B186D46F70014CE60 /* MainViewController */,
+				1C398DB51868D59800B0D49B /* ArticleViewController */,
+			);
+			name = "= Main Screen UI";
+			sourceTree = "<group>";
+		};
+		1CECB22B186D46F70014CE60 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
 				1CB59864186B877B00914C35 /* MainViewController.h */,
 				1CB59865186B877B00914C35 /* MainViewController.m */,
 			);
-			name = "= Main Screen UI";
+			name = MainViewController;
 			sourceTree = "<group>";
 		};
 		1CFDEB1F1867B30400BD3041 /* AppDelegate */ = {

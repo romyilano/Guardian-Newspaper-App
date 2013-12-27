@@ -60,4 +60,5 @@
 {
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
+
 @end

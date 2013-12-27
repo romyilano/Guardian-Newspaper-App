@@ -42,7 +42,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -51,7 +50,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 #pragma mark - Action Methods
 - (IBAction)searchBtnPressed:(UIButton *)sender {
@@ -61,14 +59,16 @@
     
     [self.textField resignFirstResponder];
     
+    NSDictionary *parameters =  @{ @"show-tags" : @"all",
+                                   @"date-id" : @"date%2Flast7days",
+                                   @"show-fields" : @"all",
+                                   @"api-key" : kGuardianKey };
+    
     // to-do - modify parameters
     
     /*
      
-     NSDictionary *parameters =  @{ @"show-tags" : @"all",
-     @"date-id" : @"date%2Flast7days",
-     @"show-fields" : @"all",
-     @"api-key" : kGuardianKey };
+   
      
      [_guardianController loadArticlesWithSearchTerm:self.textField.text
      andParameters:parameters
@@ -109,12 +109,23 @@
 #pragma - UIPickerView DataSource and Delegate Methods
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
+    return 2;
+}
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView
+numberOfRowsInComponent:(NSInteger)component
+{
+    
     return 1;
 }
 
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+-(NSString *)pickerView:(UIPickerView *)pickerView
+            titleForRow:(NSInteger)row
+           forComponent:(NSInteger)component
 {
-    return 1;
+ 
+    return @"searchoptions";
+    
 }
 
 @end

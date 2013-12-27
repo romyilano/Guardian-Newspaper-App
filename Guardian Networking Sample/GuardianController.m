@@ -51,7 +51,10 @@
 
 #pragma mark - Networking Methods
 
--(void)loadArticlesWithParameters:(NSDictionary *)parameters path:(NSString *)path ofType:(NSString *)type andCompletionBlock:(void (^)(NSArray *, BOOL, NSError *))completionBlock
+-(void)loadArticlesWithParameters:(NSDictionary *)parameters
+                             path:(NSString *)path
+                           ofType:(NSString *)type
+               andCompletionBlock:(void (^)(NSArray *, BOOL, NSError *))completionBlock
 {
     NSMutableDictionary *workingParameters = [[NSMutableDictionary alloc] init];
     
@@ -63,7 +66,7 @@
     [[GuardianAFHTTPClient sharedClient] setDefaultHeader:@"Accept" value:@"application/json"];
     
     
-    [[GuardianAFHTTPClient sharedClient] getPath:nil
+    [[GuardianAFHTTPClient sharedClient] getPath:path
                                       parameters:[workingParameters copy]
                                          success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                              
@@ -84,7 +87,15 @@
                                                  
                                              } else if ([type isEqualToString:@"sections"])
                                              {
-                                                 finalArray = [[self sectionsFromJSONResponseObject:responseObject] copy];
+                                                 
+                                                 NSArray *sectionsResultsArray = (NSArray *)responseDictionary[@"results"];
+                                                
+                                                 for (NSDictionary *sectionObj in sectionsResultsArray)
+                                                 {
+                                                     Section *section = [[Section alloc] initWithJSONDictionary:sectionObj];
+                                                     [finalArray addObject:section];
+                                                 }
+
                                              }
                                              
                                              if (completionBlock)
@@ -103,6 +114,8 @@
 
 }
 
+
+#pragma mark - Methods to Phase Out
 -(void)loadArticlesWithParameters:(NSDictionary *)searchParamters
                andCompletionBlock:(void (^)(NSArray *, BOOL, NSError *))completionBlock
 {

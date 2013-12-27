@@ -129,5 +129,7 @@
 #pragma mark - Action Methods
 
 - (IBAction)searchButtonPressed:(UIBarButtonItem *)sender {
+    [self resignFirstResponder];
+    
 }
 @end
