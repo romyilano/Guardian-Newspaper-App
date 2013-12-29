@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-PHFComposeBarView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PHFDelegateChain.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>295EEA9FECED41A6A9073840</key>
+		<key>0AC0D49849F34B73BED8CD23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5376D6B540F04F8088F8DCEE</key>
+		<key>2797DCE8AF5D4B189E127D44</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D5A5B617B6F242B6B90BBF92</key>
+		<key>305EA771E2604515BE4118AF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D62E4D1C9E63413090ADA300</key>
+		<key>96829273C66247EE900C20D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DB58F72421A34471A2ABC931</key>
+		<key>B99A5181EF50460F84DD9F76</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6D0CE8608854B3C9B956017</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF188B3D0A36489C8C1D0763</key>
 		<dict>
 			<key>primary</key>
 			<true/>

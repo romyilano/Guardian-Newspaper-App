@@ -365,17 +365,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="rF7-I7-meo">
-                                <rect key="frame" x="0.0" y="66" width="320" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </scrollView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" id="mG3-kb-h4Z">
-                                <rect key="frame" x="0.0" y="192" width="320" height="376"/>
+                                <rect key="frame" x="0.0" y="124" width="320" height="399"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EditorsPickCell" rowHeight="68" id="XWT-Dm-xmF" customClass="ResultCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="68"/>
+                                        <rect key="frame" x="0.0" y="86" width="320" height="68"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XWT-Dm-xmF" id="dim-en-zap">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="67"/>
@@ -406,6 +402,25 @@
                                     <outlet property="delegate" destination="OVe-Ww-GW3" id="vyM-36-2QH"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="hv4-kg-SAW">
+                                <rect key="frame" x="8" y="78" width="232" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OVe-Ww-GW3" id="yv3-sq-hYM"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p6l-Ui-7Wb">
+                                <rect key="frame" x="253" y="77" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchBtnPressed:" destination="OVe-Ww-GW3" eventType="touchUpInside" id="LxY-7Q-dRD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -415,15 +430,11 @@
                                 <segue destination="zee-JD-E1N" kind="push" id="EMk-I9-5fA"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Search" id="RIJ-Pl-3cb">
-                            <connections>
-                                <segue destination="MTa-Ft-g0h" kind="push" id="Tvz-dz-AnR"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="scrollView" destination="rF7-I7-meo" id="Z6C-Wz-xz3"/>
+                        <outlet property="searchButton" destination="p6l-Ui-7Wb" id="fVh-kp-Pjt"/>
                         <outlet property="tableView" destination="mG3-kb-h4Z" id="G9b-kN-xzp"/>
+                        <outlet property="textField" destination="hv4-kg-SAW" id="gVc-YN-a6V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOG-TG-bAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -686,7 +697,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Tvz-dz-AnR"/>
         <segue reference="gNi-hy-oRI"/>
         <segue reference="WGs-JS-75P"/>
         <segue reference="R4j-bJ-ULh"/>

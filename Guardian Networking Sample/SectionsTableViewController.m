@@ -45,6 +45,8 @@
                                      
                                      if (!error)
                                      {
+                                         
+                                         // to-do - take the array and clean it out with an acceptable array
                                          self.sections = array;
                                          [self.tableView reloadData];
                                          

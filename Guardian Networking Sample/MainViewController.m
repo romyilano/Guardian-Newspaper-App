@@ -7,18 +7,14 @@
 //
 
 #import "MainViewController.h"
-
-
 #import "GuardianController.h"
 #import "ResultCell.h"
 #import "ResultsViewController.h"
 #import "ArticleViewController.h"
 
-
 #import "Section.h"
 #import "Article.h"
 #import "Fields.h"
-
 
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -27,8 +23,11 @@
 {
     GuardianController *_controller;
 }
+
 @property (strong, nonatomic) NSArray *editorsPicksArticles;
+
 @end
+
 
 @implementation MainViewController
 
@@ -37,6 +36,15 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWillToggle:)
+                                                     name:UIKeyboardWillShowNotification
+                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWillToggle:)
+                                                     name:UIKeyboardWillHideNotification
+                                                   object:nil];
     }
     return self;
 }
@@ -76,6 +84,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillShowNotification
+                                                  object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
 }
 
 #pragma mark - Navigation
@@ -127,9 +145,9 @@
 
 
 #pragma mark - Action Methods
-
-- (IBAction)searchButtonPressed:(UIBarButtonItem *)sender {
-    [self resignFirstResponder];
+-(IBAction)searchBtnPressed:(id)sender
+{
+    [self.textField resignFirstResponder];
     
 }
 @end

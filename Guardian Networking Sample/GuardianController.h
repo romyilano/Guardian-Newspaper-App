@@ -30,8 +30,6 @@
 // returns an Array of Article objects from a JSON Response Object
 -(NSArray *)articlesFromJSONResponseObject:(id)responseObject;
 
-// returns an Array of Section Objects from a JSON Response Object
--(NSArray *)sectionsFromJSONResponseObject:(id)resopnseObject;
-
+-(NSArray *)goodSections;
 
 @end

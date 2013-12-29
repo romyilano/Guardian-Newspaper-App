@@ -13,11 +13,9 @@
 
 @interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
 
-- (IBAction)searchButtonPressed:(UIBarButtonItem *)sender;
-
-
+-(IBAction)searchBtnPressed:(id)sender;
 @end

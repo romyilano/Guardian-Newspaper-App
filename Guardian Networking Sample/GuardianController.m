@@ -18,7 +18,6 @@
 
 @interface GuardianController ()
 @property (strong, nonatomic) NSDictionary *defaultParameters;
-
 @end
 
 
@@ -93,9 +92,21 @@
                                                  for (NSDictionary *sectionObj in sectionsResultsArray)
                                                  {
                                                      Section *section = [[Section alloc] initWithJSONDictionary:sectionObj];
-                                                     [finalArray addObject:section];
+                                                     if ([[self goodSections] containsObject:section.sectionID])
+                                                     {
+                                                          [finalArray addObject:section];
+                                                     }
+                                                    
                                                  }
-
+                                             } else if ([type isEqualToString:@"articles"])
+                                             {
+                                                 NSArray *articlesArray = (NSArray *)responseDictionary[@"results"];
+                                                 
+                                                 for (NSDictionary *articleObj in articlesArray)
+                                                 {
+                                                     Article *article = [[Article alloc] initWithDictionary:articleObj];
+                                                     [finalArray addObject:article];
+                                                 }
                                              }
                                              
                                              if (completionBlock)
@@ -208,25 +219,23 @@
     return  [NSArray arrayWithArray:cleanArticleArrayWorking];
 }
 
--(NSArray *)sectionsFromJSONResponseObject:(id)resopnseObject
+-(NSArray *)goodSections
 {
-    NSDictionary *responseObjectDictionary = resopnseObject;
-    NSDictionary *responseDictionary = responseObjectDictionary[@"response"];
-    NSArray *resultsArray = (NSArray *)responseDictionary[@"results"];
-    
-    NSMutableArray *workingArray = [[NSMutableArray alloc] initWithCapacity:resultsArray.count];
-    
-    // clean up array and put it into clean properly formatted section objects
-    
-    for (NSDictionary *sectionObj in resultsArray)
-    {
-        Section *section = [[Section alloc] initWithJSONDictionary:sectionObj];
-        [workingArray addObject:section];
-    }
-    
-    return [NSArray arrayWithArray:workingArray];
+    return @[ @"commentisfree",
+              @"world",
+              @"lifeandstyle",
+              @"technology",
+              @"environment",
+              @"books",
+              @"science",
+              @"artanddesign",
+              @"film",
+              @"music",
+              @"politics",
+              @"sport",
+              @"society"
+              ];
 }
-
 
 
 @end
