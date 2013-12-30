@@ -287,6 +287,52 @@
             </objects>
             <point key="canvasLocation" x="2926" y="-1044"/>
         </scene>
+        <!--Results View Controller-->
+        <scene sceneID="kcH-So-9qw">
+            <objects>
+                <tableViewController id="M6c-CI-e1b" customClass="ResultsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" sectionHeaderHeight="22" sectionFooterHeight="22" id="XcO-x5-G34">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResultCell" rowHeight="89" id="Zdx-4f-VKh" customClass="ResultCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="89"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zdx-4f-VKh" id="U1J-66-bgA">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="U2e-go-gjf">
+                                            <rect key="frame" x="8" y="0.0" width="77" height="88"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MEd-fM-QKj">
+                                            <rect key="frame" x="98" y="18" width="211" height="57"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="articleImage" destination="U2e-go-gjf" id="bd1-hL-RUU"/>
+                                    <outlet property="articleTitleLabel" destination="MEd-fM-QKj" id="VzS-Mh-a9i"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M6c-CI-e1b" id="de9-Pv-g1B"/>
+                            <outlet property="delegate" destination="M6c-CI-e1b" id="NI7-bz-HVx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="FjS-cl-WOM"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZLw-vk-kt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1607" y="360"/>
+        </scene>
         <!--Search Choices View Controller-->
         <scene sceneID="bN6-B7-8ud">
             <objects>
@@ -355,7 +401,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5u-oI-W5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1469" y="382"/>
+            <point key="canvasLocation" x="2220" y="360"/>
         </scene>
         <!--Main View Controller - Guardian-->
         <scene sceneID="hDq-ue-AwV">
@@ -412,7 +458,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p6l-Ui-7Wb">
-                                <rect key="frame" x="253" y="77" width="48" height="30"/>
+                                <rect key="frame" x="253" y="79" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -435,6 +481,7 @@
                         <outlet property="searchButton" destination="p6l-Ui-7Wb" id="fVh-kp-Pjt"/>
                         <outlet property="tableView" destination="mG3-kb-h4Z" id="G9b-kN-xzp"/>
                         <outlet property="textField" destination="hv4-kg-SAW" id="gVc-YN-a6V"/>
+                        <segue destination="M6c-CI-e1b" kind="push" identifier="MainSearchSegue" id="aWS-WG-DYT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOG-TG-bAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -467,7 +514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t5B-PN-bnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1439" y="1607"/>
+            <point key="canvasLocation" x="1475" y="1111"/>
         </scene>
         <!--Sections Table View Controller - Sections-->
         <scene sceneID="0jg-sc-ZU6">

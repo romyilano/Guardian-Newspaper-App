@@ -25,6 +25,7 @@
 }
 
 @property (strong, nonatomic) NSArray *editorsPicksArticles;
+@property (strong, nonatomic) NSArray *searchResultArticles;
 
 @end
 
@@ -89,6 +90,12 @@
         ArticleViewController *articleViewController = segue.destinationViewController;
         articleViewController.article = selectedArticle;
         
+    } else if ([segue.identifier isEqualToString:@"MainSearchSegue"])
+    {
+        
+        ResultsViewController *resultsViewController = segue.destinationViewController;
+        resultsViewController.passedArticles = self.searchResultArticles;
+        resultsViewController.searchTerm = self.textField.text;
     }
 }
 
@@ -130,6 +137,35 @@
 -(IBAction)searchBtnPressed:(id)sender
 {
     [self.textField resignFirstResponder];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Searching";
+    
+    NSDictionary *parameters =  @{ @"q" : self.textField.text,
+                                   @"show-tags" : @"all",
+                                   @"page-size" : @"40",
+                                   @"show-fields" : @"all",
+                                   @"api-key" : kGuardianKey };
+    
+    [_controller loadArticlesWithParameters:parameters
+                                       path:@"search"
+                                     ofType:@"articles"
+                         andCompletionBlock:^(NSArray *array, BOOL success, NSError *error) {
+                             
+                             if (!error)
+                             {
+                                 
+                                 self.searchResultArticles = array;
+                                 [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                 
+                                 [self performSegueWithIdentifier:@"MainSearchSegue" sender:self];
+                             }
+                             else
+                             {
+                                 NSLog(@"Sorry results didn't go through: %@", error);
+                                 [MBProgressHUD hideHUDForView:self.view animated:YES];
+                             }
+
+                                     }];
     
 }
 @end
